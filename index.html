@@ -1,0 +1,2375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gabriel Web Works — professional websites, branding and digital experiences for hospitality and tourism businesses.">
+<title>Gabriel Web Works — Hospitality & Tourism Websites</title>
+
+<style>
+:root{
+  --bg:#f7f5f0;
+  --paper:#fff;
+  --ink:#151515;
+  --muted:#6d6a64;
+  --line:#dedad2;
+  --dark:#111718;
+  --gold:#a87849;
+  --soft:#eee8df;
+  --max:1220px;
+  --radius:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.55;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(247,245,240,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.brand{
+  font-weight:850;
+  letter-spacing:-.03em;
+}
+.brand span{color:var(--gold)}
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.nav-links{
+  display:flex;
+  gap:20px;
+  font-size:.92rem;
+  color:#4d4a45;
+}
+.lang{
+  position:relative;
+}
+.lang-current{
+  width:48px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:999px;
+  cursor:pointer;
+}
+.lang-current img,.lang-option img{
+  width:24px;
+  height:16px;
+  object-fit:cover;
+  border-radius:2px;
+}
+.lang-fallback{font-size:1.15rem}
+.lang-menu{
+  display:none;
+  position:absolute;
+  right:0;
+  top:48px;
+  width:190px;
+  padding:8px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+.lang.open .lang-menu{display:block}
+.lang-option{
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:10px 12px;
+  border:0;
+  background:transparent;
+  border-radius:12px;
+  cursor:pointer;
+  text-align:left;
+}
+.lang-option:hover{background:#f4f1eb}
+
+/* BUTTONS */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 21px;
+  border-radius:999px;
+  background:var(--dark);
+  color:#fff;
+  font-weight:750;
+  border:1px solid var(--dark);
+  transition:.25s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.light{
+  color:var(--dark);
+  background:#fff;
+  border-color:var(--line);
+}
+
+/* HERO */
+.hero{
+  min-height:82vh;
+  padding:100px 0 78px;
+  display:grid;
+  align-items:center;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:70px;
+  align-items:center;
+}
+.kicker{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.17em;
+  font-weight:800;
+  font-size:.73rem;
+  margin-bottom:22px;
+}
+h1,h2,h3,.serif{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:500;
+}
+h1{
+  font-size:clamp(3.6rem,7.7vw,7rem);
+  line-height:.9;
+  letter-spacing:-.055em;
+  margin:0;
+}
+.hero p{
+  max-width:700px;
+  margin:28px 0;
+  color:var(--muted);
+  font-size:1.13rem;
+}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{
+  min-height:450px;
+  padding:36px;
+  background:var(--dark);
+  color:#fff;
+  border-radius:36px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 28px 70px rgba(0,0,0,.14);
+}
+.hero-card:before{
+  content:"";
+  position:absolute;
+  width:310px;height:310px;
+  border-radius:50%;
+  right:-110px;top:-100px;
+  background:radial-gradient(circle,rgba(255,255,255,.16),transparent 67%);
+}
+.hero-card strong{
+  position:relative;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:2.2rem;
+  line-height:1.12;
+  font-weight:500;
+}
+.hero-card small{
+  position:relative;
+  max-width:390px;
+  color:#b7c0bf;
+  font-size:.95rem;
+}
+
+/* SECTIONS */
+section{padding:92px 0}
+.section-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:end;
+  margin-bottom:42px;
+}
+.section-head h2{
+  margin:0;
+  font-size:clamp(2.7rem,5vw,4.8rem);
+  line-height:.96;
+  letter-spacing:-.045em;
+}
+.section-head p{
+  margin:0;
+  max-width:600px;
+  justify-self:end;
+  color:var(--muted);
+  font-size:1.04rem;
+}
+.country-switch{
+  display:flex;
+  gap:10px;
+  margin-bottom:28px;
+  flex-wrap:wrap;
+}
+.country-btn{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:999px;
+  padding:11px 18px;
+  cursor:pointer;
+  font-weight:750;
+}
+.country-btn.active{
+  background:var(--dark);
+  color:#fff;
+  border-color:var(--dark);
+}
+.country-group{display:none}
+.country-group.active{display:grid;gap:32px}
+
+/* PROJECT */
+.project{
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) minmax(315px,.65fr);
+  gap:26px;
+  padding:18px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:0 12px 40px rgba(30,28,23,.045);
+}
+.browser{
+  overflow:hidden;
+  border:1px solid #d9d5cc;
+  border-radius:20px;
+  background:#f1eee7;
+}
+.browser-top{
+  display:none;
+  height:43px;
+  align-items:center;
+  gap:7px;
+  padding:0 14px;
+  background:#f1eee7;
+  border-bottom:1px solid #ddd8ce;
+}
+.dot{width:10px;height:10px;border-radius:50%;background:#beb9b0}
+.url{
+  margin-left:8px;
+  padding:5px 13px;
+  background:#fff;
+  border:1px solid #ddd8ce;
+  border-radius:999px;
+  color:#777168;
+  font-size:.74rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.preview{
+  position:relative;
+  aspect-ratio:16 / 9;
+  height:auto;
+  overflow:hidden;
+  background:linear-gradient(135deg,#475c61,#b8aa96);
+}
+.preview img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  transition:transform 7s ease;
+}
+.project:hover .preview img{transform:scale(1.035)}
+.preview-placeholder{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:flex-end;
+  padding:34px;
+  color:#fff;
+  background:
+    linear-gradient(to bottom,rgba(0,0,0,.03),rgba(0,0,0,.56)),
+    linear-gradient(135deg,#425a61,#bea989);
+}
+.preview-placeholder strong{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:3.2rem;
+  line-height:.95;
+  font-weight:500;
+}
+.live-badge{
+  position:absolute;
+  top:18px;
+  right:18px;
+  z-index:3;
+  background:rgba(17,23,24,.88);
+  color:#fff;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:.71rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.project-info{
+  padding:16px 10px 14px 4px;
+  display:flex;
+  flex-direction:column;
+}
+.project-country{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-size:.72rem;
+  font-weight:850;
+}
+.project-info h3{
+  font-size:2.35rem;
+  line-height:1;
+  margin:9px 0 15px;
+}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:24px}
+.tag{
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:.73rem;
+  color:#5b564e;
+  background:#fbf9f5;
+}
+.quote{
+  margin:auto 0 22px;
+  padding:21px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.18rem;
+}
+.owner{
+  margin-bottom:22px;
+  color:var(--muted);
+  font-size:.88rem;
+}
+.owner strong{color:var(--ink)}
+.project-actions{margin-top:auto}
+
+
+/* PROJECT OVERVIEW */
+.project-summary{
+  margin:auto 0 24px;
+  padding:22px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.project-summary-label{
+  display:block;
+  margin-bottom:8px;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-size:.68rem;
+  font-weight:850;
+}
+.project-summary p{
+  margin:0;
+  color:#545049;
+  font-size:.98rem;
+  line-height:1.65;
+}
+
+/* MORE PROJECTS LOADER */
+.more-projects{
+  margin-top:2px;
+  padding:34px 28px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:linear-gradient(180deg,#fff,#f8f5ef);
+  overflow:hidden;
+}
+.more-projects-head{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin-bottom:23px;
+  color:#57524a;
+  font-size:.9rem;
+  font-weight:750;
+}
+.loading-dots{
+  display:inline-flex;
+  gap:5px;
+}
+.loading-dots i{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--gold);
+  animation:dotPulse 1.2s infinite ease-in-out;
+}
+.loading-dots i:nth-child(2){animation-delay:.16s}
+.loading-dots i:nth-child(3){animation-delay:.32s}
+@keyframes dotPulse{
+  0%,80%,100%{opacity:.25;transform:translateY(0)}
+  40%{opacity:1;transform:translateY(-4px)}
+}
+.skeleton-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.skeleton{
+  min-height:125px;
+  border-radius:18px;
+  background:
+    linear-gradient(100deg,
+      #ece8e0 20%,
+      #f8f6f1 38%,
+      #ece8e0 56%);
+  background-size:220% 100%;
+  animation:shimmer 1.8s infinite linear;
+  position:relative;
+  overflow:hidden;
+}
+.skeleton:after{
+  content:"";
+  position:absolute;
+  left:16px;
+  right:35%;
+  bottom:18px;
+  height:9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.8);
+  box-shadow:0 -18px 0 rgba(255,255,255,.55);
+}
+@keyframes shimmer{
+  to{background-position-x:-220%}
+}
+@media(max-width:720px){
+  .skeleton-row{grid-template-columns:1fr}
+  .skeleton:nth-child(2),.skeleton:nth-child(3){display:none}
+}
+
+/* SERVICES */
+.services{
+  background:var(--dark);
+  color:#fff;
+}
+.services .section-head p{color:#b6bfbe}
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.service{
+  min-height:245px;
+  padding:25px;
+  border:1px solid rgba(255,255,255,.09);
+  background:#1c2324;
+  border-radius:24px;
+}
+.service .num{color:#c29468;font-weight:800;font-size:.8rem}
+.service h3{font-size:1.7rem;margin:46px 0 13px}
+.service p{margin:0;color:#b7c0bf;font-size:.92rem}
+
+/* REVIEWS */
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.review{
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:#fff;
+  padding:28px;
+}
+.review p{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.2rem;
+  margin:0 0 34px;
+}
+.review small{color:var(--muted)}
+
+/* CTA */
+.cta-box{
+  background:var(--soft);
+  border-radius:34px;
+  padding:58px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:30px;
+  align-items:end;
+}
+.cta-box h2{
+  margin:0 0 16px;
+  font-size:clamp(2.7rem,5vw,5rem);
+  line-height:.95;
+  letter-spacing:-.045em;
+}
+.cta-box p{margin:0;color:var(--muted);max-width:680px}
+.cta-box .btn{justify-self:end}
+
+footer{
+  padding:28px 0 44px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:.88rem;
+}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media(max-width:1000px){
+  .hero-grid,.section-head,.project,.cta-box{grid-template-columns:1fr}
+  .hero{min-height:auto;padding-top:70px}
+  .section-head p{justify-self:start}
+  .service-grid{grid-template-columns:repeat(2,1fr)}
+  .review-grid{grid-template-columns:1fr}
+  .cta-box .btn{justify-self:start}
+}
+@media(max-width:720px){
+  .wrap{width:min(var(--max),calc(100% - 24px))}
+  .nav-links{display:none}
+  section{padding:70px 0}
+  h1{font-size:3.6rem}
+  .hero-card{min-height:340px}
+  .project{padding:11px}
+  .preview{height:370px}
+  .project-info{padding:10px 7px}
+  .service-grid{grid-template-columns:1fr}
+  .cta-box{padding:34px 24px}
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+}
+
+/* ================================================================
+   GABRIEL WEB WORKS — VISUAL UPGRADE
+   ================================================================ */
+
+.brand{
+  display:flex;
+  align-items:baseline;
+  gap:7px;
+  letter-spacing:.04em;
+  font-size:.98rem;
+}
+.brand span{
+  color:var(--gold);
+  font-size:.76rem;
+  letter-spacing:.14em;
+}
+
+.hero{
+  min-height:88vh;
+  padding:74px 0 84px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 12% 15%, rgba(168,120,73,.12), transparent 28%),
+    radial-gradient(circle at 92% 65%, rgba(17,23,24,.08), transparent 32%);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  border:1px solid rgba(168,120,73,.16);
+  border-radius:50%;
+  left:-260px;
+  bottom:-260px;
+}
+.hero-grid{position:relative;z-index:2}
+.hero h1{max-width:790px}
+.hero .kicker:before{
+  content:"";
+  display:inline-block;
+  width:34px;
+  height:1px;
+  background:var(--gold);
+  margin-right:12px;
+  vertical-align:middle;
+}
+.hero-showcase{
+  position:relative;
+  min-height:520px;
+  display:grid;
+  grid-template-columns:1.14fr .86fr;
+  gap:12px;
+}
+.hero-shot,
+.hero-shot-main{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  border-radius:25px;
+  background:#111;
+  box-shadow:0 26px 70px rgba(15,15,15,.18);
+  border:1px solid rgba(255,255,255,.7);
+}
+.hero-shot img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  transition:transform .7s ease;
+}
+.hero-shot:hover img{transform:scale(1.035)}
+.hero-shot:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(5,10,12,.72),transparent 48%);
+  pointer-events:none;
+}
+.hero-shot span{
+  position:absolute;
+  z-index:2;
+  left:18px;
+  bottom:16px;
+  color:#fff;
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+.hero-shot-main{min-height:500px}
+.hero-shot-stack{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:12px;
+}
+.hero-proof{
+  position:absolute;
+  left:34px;
+  right:34px;
+  bottom:-34px;
+  z-index:5;
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  align-items:center;
+  padding:18px 22px;
+  background:rgba(17,23,24,.94);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+  box-shadow:0 20px 45px rgba(0,0,0,.18);
+  backdrop-filter:blur(12px);
+}
+.hero-proof strong{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.05rem;
+  font-weight:500;
+}
+.hero-proof small{color:#bdc4c3;text-align:right}
+
+/* Make portfolio section feel more editorial */
+#work{
+  background:
+    linear-gradient(rgba(247,245,240,.96),rgba(247,245,240,.96)),
+    url("assets/Images/seashore.webp") center/cover fixed;
+}
+.project{
+  transition:transform .28s ease, box-shadow .28s ease;
+}
+.project:hover{
+  transform:translateY(-4px);
+  box-shadow:0 22px 70px rgba(30,28,23,.10);
+}
+
+/* Real client recommendations loaded from database */
+.client-reviews{
+  display:grid;
+  gap:10px;
+  margin:0 0 20px;
+}
+.client-review{
+  position:relative;
+  padding:18px 18px 16px;
+  border-radius:18px;
+  background:#f7f3ec;
+  border:1px solid #e2dacf;
+}
+.client-review:before{
+  content:"“";
+  position:absolute;
+  right:15px;
+  top:0px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:3.2rem;
+  line-height:1;
+  color:rgba(168,120,73,.18);
+}
+.client-review-stars{
+  color:#b6814e;
+  letter-spacing:.08em;
+  font-size:.82rem;
+  margin-bottom:8px;
+}
+.client-review-text{
+  margin:0 0 12px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.04rem;
+  line-height:1.52;
+  color:#302e2a;
+}
+.client-review-author{
+  font-size:.79rem;
+  color:#766f66;
+}
+.client-review-author strong{
+  display:block;
+  color:#1b1a18;
+  font-size:.84rem;
+}
+.client-review-badge{
+  display:inline-flex;
+  margin-top:8px;
+  padding:5px 8px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid #ddd5ca;
+  color:#6b635a;
+  font-size:.65rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+/* Services gets a subtle visual layer */
+.services{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+.services:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:url("assets/Images/namaste.webp") center/cover;
+  opacity:.12;
+}
+.services:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(90deg,rgba(17,23,24,.99),rgba(17,23,24,.91));
+}
+
+/* Strong contact block */
+#contact{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(17,23,24,.82),rgba(17,23,24,.50)),
+    url("assets/Images/central.webp") center/cover;
+}
+#contact .cta-box{
+  background:rgba(247,245,240,.93);
+  backdrop-filter:blur(8px);
+  box-shadow:0 25px 80px rgba(0,0,0,.20);
+}
+.whatsapp-btn{
+  gap:10px;
+  background:#132a22;
+  border-color:#132a22;
+}
+.wa-dot{
+  color:#4fca75;
+  font-size:1.1rem;
+}
+
+@media(max-width:1000px){
+  .hero-showcase{min-height:470px}
+  .hero-shot-main{min-height:450px}
+}
+@media(max-width:720px){
+  .hero{padding-top:44px}
+  .hero-showcase{
+    grid-template-columns:1fr;
+    min-height:auto;
+    margin-top:18px;
+  }
+  .hero-shot-main{min-height:270px}
+  .hero-shot-stack{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:none;
+    min-height:150px;
+  }
+  .hero-proof{
+    position:relative;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    margin-top:12px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .hero-proof small{text-align:left}
+}
+
+
+.static-review{
+  margin:0 0 22px;
+}
+.client-review-kicker{
+  margin-bottom:9px;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-size:.67rem;
+  font-weight:850;
+}
+.client-review h4{
+  margin:0 32px 12px 0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.18rem;
+  line-height:1.25;
+  font-weight:500;
+  color:#1f1d1a;
+}
+.static-review .client-review-text{
+  font-size:.98rem;
+  margin-bottom:10px;
+}
+.static-review .client-review-author{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid #e2dacf;
+}
+
+
+/* COMPACT PORTFOLIO CARD CLEANUP */
+.project-info{
+  gap:6px;
+}
+.project-country{
+  margin-bottom:2px;
+}
+.project-info h3{
+  margin:4px 0 0;
+}
+.live-badge{
+  padding:10px 14px;
+  background:rgba(17,23,24,.92);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 8px 18px rgba(0,0,0,.18);
+}
+.seashore-card{
+  grid-template-columns:minmax(0,1.45fr) minmax(250px,.55fr);
+  align-items:start;
+}
+.seashore-card .project-country{
+  font-size:.68rem;
+  white-space:nowrap;
+}
+.seashore-card .project-info h3{
+  font-size:1.6rem;
+  line-height:1.05;
+  white-space:nowrap;
+}
+.seashore-card .static-review{
+  grid-column:1 / -1;
+  width:100%;
+  margin:6px 0 0;
+  padding:20px 22px 18px;
+}
+.seashore-card .static-review h4{
+  margin:0 34px 10px 0;
+  font-size:1.08rem;
+}
+.seashore-card .static-review .client-review-text{
+  font-size:.94rem;
+  line-height:1.5;
+}
+@media(max-width:1000px){
+  .seashore-card{
+    grid-template-columns:1fr;
+  }
+  .seashore-card .project-info h3{
+    white-space:normal;
+  }
+}
+
+
+/* ================================================================
+   SEASHORE REVIEW — WIDER, TALLER, GOOGLE-MAPS-LIKE
+   ================================================================ */
+.seashore-review-project{
+  align-items:stretch;
+}
+
+.seashore-review-project .project-info{
+  padding:6px 7px 6px 0;
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.seashore-review-project .project-country{
+  margin:0 0 1px;
+  font-size:.66rem;
+  line-height:1.15;
+}
+
+.seashore-review-project .project-info h3{
+  margin:0 0 7px;
+  font-size:1.68rem;
+  line-height:1.03;
+}
+
+/* Give almost all the available panel to the review */
+.seashore-review-project .static-review{
+  width:100%;
+  flex:1;
+  min-height:0;
+  margin:0;
+  padding:12px 13px 11px;
+  background:#fff;
+  border:1px solid #e1ddd6;
+  border-radius:14px;
+  box-shadow:0 4px 14px rgba(32,29,24,.05);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.seashore-review-project .client-review:before{
+  display:none;
+}
+
+.seashore-review-project .client-review-kicker{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  margin:0 0 5px;
+  color:#6c675f;
+  text-transform:none;
+  letter-spacing:0;
+  font-size:.68rem;
+  line-height:1.15;
+  font-weight:700;
+}
+
+.seashore-review-project .client-review-kicker:before{
+  content:"★";
+  color:#f4b400;
+  font-size:.77rem;
+}
+
+.seashore-review-project .static-review h4{
+  margin:0 0 6px;
+  font-family:Inter,Arial,sans-serif;
+  font-size:.87rem;
+  line-height:1.25;
+  font-weight:800;
+  color:#202124;
+}
+
+.seashore-review-project .client-review-body{
+  flex:1;
+  min-height:0;
+  max-height:245px;
+  overflow-y:auto;
+  padding-right:5px;
+  scrollbar-width:thin;
+  scrollbar-color:#c9c2b8 transparent;
+}
+
+.seashore-review-project .client-review-body::-webkit-scrollbar{
+  width:5px;
+}
+
+.seashore-review-project .client-review-body::-webkit-scrollbar-thumb{
+  background:#cfc8be;
+  border-radius:999px;
+}
+
+.seashore-review-project .client-review-text{
+  margin:0 0 6px;
+  font-family:Inter,Arial,sans-serif;
+  font-size:.80rem;
+  line-height:1.42;
+  color:#3c4043;
+}
+
+.seashore-review-project .client-review-author{
+  flex:0 0 auto;
+  margin-top:7px;
+  padding-top:7px;
+  border-top:1px solid #ece7df;
+  color:#746d64;
+  font-size:.71rem;
+  line-height:1.3;
+}
+
+.seashore-review-project .client-review-author strong{
+  display:block;
+  margin-bottom:1px;
+  color:#202124;
+  font-size:.79rem;
+  font-weight:700;
+}
+
+/* Free the space around the review */
+.seashore-review-project .tags,
+.seashore-review-project .project-summary,
+.seashore-review-project .project-actions{
+  display:none;
+}
+
+@media(max-width:1000px){
+  .seashore-review-project .project-info{
+    padding:7px 1px 1px;
+  }
+  .seashore-review-project .client-review-body{
+    max-height:220px;
+  }
+}
+
+@media(max-width:720px){
+  .seashore-review-project .client-review-body{
+    max-height:260px;
+  }
+}
+
+
+/* ================================================================
+   SEASHORE — MATCH IMAGE HEIGHT TO REVIEW COLUMN
+   ================================================================ */
+.seashore-review-project{
+  align-items:stretch;
+}
+
+.seashore-review-project > .browser{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.seashore-review-project > .browser .preview{
+  flex:1;
+  height:100%;
+  min-height:100%;
+  aspect-ratio:auto;
+}
+
+.seashore-review-project > .browser .preview img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+
+/* Keep the review as-is, using the available right-column height */
+.seashore-review-project .project-info{
+  height:100%;
+}
+
+/* On smaller screens return to the normal image ratio */
+@media(max-width:1000px){
+  .seashore-review-project > .browser{
+    height:auto;
+  }
+
+  .seashore-review-project > .browser .preview{
+    height:auto;
+    min-height:0;
+    aspect-ratio:16 / 9;
+  }
+
+  .seashore-review-project > .browser .preview img{
+    height:100%;
+  }
+}
+
+
+/* ================================================================
+   SERVICE PACKAGES — COMPACT PREMIUM LAYOUT
+   ================================================================ */
+.packages-section{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:82px 0;
+  background:#111718;
+  color:#fff;
+}
+.packages-section:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:url("assets/Images/namaste.webp") center/cover;
+  opacity:.08;
+}
+.packages-section:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:radial-gradient(circle at 12% 12%,rgba(168,120,73,.20),transparent 26%),linear-gradient(90deg,rgba(17,23,24,.99),rgba(17,23,24,.94));
+}
+.packages-head{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:56px;
+  align-items:end;
+  margin-bottom:30px;
+}
+.packages-kicker{
+  margin-bottom:12px;
+  color:#d0a77d;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.70rem;
+  font-weight:850;
+}
+.packages-head h2{
+  margin:0;
+  max-width:760px;
+  font-size:clamp(2.45rem,4.5vw,4.35rem);
+  line-height:.96;
+  letter-spacing:-.045em;
+}
+.packages-head p{
+  margin:0;
+  color:#b9c1c0;
+  font-size:.98rem;
+  line-height:1.65;
+}
+.package-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.package-card{
+  position:relative;
+  min-height:0;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:23px;
+  background:rgba(28,35,36,.90);
+  box-shadow:0 18px 50px rgba(0,0,0,.14);
+  overflow:hidden;
+}
+.package-card-featured{
+  border-color:rgba(208,167,125,.42);
+  background:linear-gradient(145deg,rgba(45,37,31,.95),rgba(28,35,36,.94));
+}
+.package-ribbon{
+  position:absolute;
+  top:18px;
+  right:18px;
+  padding:6px 9px;
+  border-radius:999px;
+  background:#d0a77d;
+  color:#171717;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.62rem;
+  font-weight:900;
+}
+.package-top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:14px;
+}
+.package-num{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:31px;
+  height:31px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:50%;
+  color:#d0a77d;
+  font-size:.69rem;
+  font-weight:850;
+}
+.package-level{
+  color:#aeb8b6;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-size:.66rem;
+  font-weight:850;
+}
+.package-card h3{
+  margin:0 0 8px;
+  font-size:2rem;
+  line-height:1;
+}
+.package-lead{
+  max-width:610px;
+  margin:0 0 16px;
+  color:#bec6c5;
+  font-size:.90rem;
+  line-height:1.52;
+}
+.package-features{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:8px;
+}
+.package-features li{
+  position:relative;
+  padding-left:20px;
+  color:#e1e5e4;
+  font-size:.83rem;
+  line-height:1.4;
+}
+.package-features li:before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  color:#d0a77d;
+  font-weight:900;
+}
+.package-cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-top:19px;
+  padding-top:15px;
+  border-top:1px solid rgba(255,255,255,.10);
+  color:#fff;
+  font-size:.79rem;
+  font-weight:850;
+}
+.package-cta:hover{color:#e0b889}
+.package-card-pro{
+  grid-column:1 / -1;
+  padding:26px;
+  background:linear-gradient(115deg,rgba(34,42,43,.97),rgba(22,28,29,.97));
+}
+.package-pro-head{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;
+  align-items:start;
+}
+.package-pro-badge{
+  padding:9px 12px;
+  border:1px solid rgba(208,167,125,.28);
+  border-radius:999px;
+  background:rgba(208,167,125,.09);
+  color:#d7b18b;
+  white-space:nowrap;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.64rem;
+  font-weight:850;
+}
+.package-pro-body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  margin-top:17px;
+  padding-top:17px;
+  border-top:1px solid rgba(255,255,255,.09);
+}
+.included-strip{
+  margin-top:16px;
+  padding:18px 20px;
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:24px;
+  align-items:center;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:19px;
+  background:rgba(255,255,255,.045);
+}
+.included-copy{display:grid;gap:3px}
+.included-label{
+  color:#d0a77d;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:.62rem;
+  font-weight:850;
+}
+.included-copy strong{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.08rem;
+  font-weight:500;
+}
+.included-items{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  justify-content:flex-end;
+}
+.included-items span{
+  padding:7px 9px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+  color:#cbd1d0;
+  font-size:.70rem;
+  white-space:nowrap;
+}
+@media(max-width:900px){
+  .packages-head{grid-template-columns:1fr;gap:18px}
+  .included-strip{grid-template-columns:1fr}
+  .included-items{justify-content:flex-start}
+}
+@media(max-width:720px){
+  .packages-section{padding:62px 0}
+  .package-grid{grid-template-columns:1fr}
+  .package-card-pro{grid-column:auto}
+  .package-pro-head,.package-pro-body{grid-template-columns:1fr}
+  .package-pro-badge{width:max-content;max-width:100%;white-space:normal}
+  .package-card{padding:20px}
+  .package-card h3{font-size:1.72rem}
+  .included-strip{padding:16px}
+  .included-items span{font-size:.68rem}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">GABRIEL <span>WEB WORKS</span></a>
+
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#work" data-i18n="navWork">Work</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="lang" id="langPicker">
+        <button class="lang-current" id="langCurrent" aria-label="Language"></button>
+        <div class="lang-menu">
+          <button class="lang-option" data-lang="ro"><img src="assets/Icons/flag_ro.webp" alt=""><span>Română</span></button>
+          <button class="lang-option" data-lang="en"><img src="assets/Icons/flag_en.webp" alt=""><span>English</span></button>
+          <button class="lang-option" data-lang="el"><img src="assets/Icons/flag_gr.webp" alt=""><span>Ελληνικά</span></button>
+          <button class="lang-option" data-lang="de"><img src="assets/Icons/flag_de.webp" alt=""><span>Deutsch</span></button>
+          <button class="lang-option" data-lang="bg"><img src="assets/Icons/flag_bg.webp" alt=""><span>Български</span></button>
+          <button class="lang-option" data-lang="sr"><img src="assets/Icons/flag_rs.webp" alt=""><span>Srpski</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker" data-i18n="heroKicker">Hospitality · Tourism · HoReCa</div>
+      <h1 data-i18n="heroTitle">Professional websites for hospitality.</h1>
+      <p data-i18n="heroText">
+        Websites, branding and digital experiences created for accommodation and tourism businesses in Halkidiki, Greece, Romania and beyond.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#work" data-i18n="viewWork">View our work</a>
+        <a class="btn light" href="#contact" data-i18n="startProject">Start a project</a>
+      </div>
+    </div>
+
+    <aside class="hero-showcase" aria-label="Selected Gabriel Web Works projects">
+      <a class="hero-shot hero-shot-main" href="https://www.theasisluxuryapartments.com" target="_blank" rel="noopener">
+        <img src="assets/Images/theasis.webp" alt="Theasis website">
+        <span>Theasis · Halkidiki</span>
+      </a>
+      <div class="hero-shot-stack">
+        <a class="hero-shot" href="https://www.cucuresidence.com/" target="_blank" rel="noopener">
+          <img src="assets/Images/cucu.webp" alt="Cucu Residence website">
+          <span>Cucu Residence · Brașov</span>
+        </a>
+        <a class="hero-shot" href="https://www.NamasteHomes.gr" target="_blank" rel="noopener">
+          <img src="assets/Images/namaste.webp" alt="Namaste Homes website">
+          <span>Namaste Homes · Greece</span>
+        </a>
+      </div>
+      <div class="hero-proof">
+        <strong data-i18n="heroProofTitle">Real projects. Live websites.</strong>
+        <small data-i18n="heroProofText">Built for hospitality businesses in Greece and Romania.</small>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="workTitle">Selected websites</h2>
+      <p data-i18n="workText">
+        Every project is built around the property, its guests, its identity and the destination it belongs to.
+      </p>
+    </div>
+
+    <div class="country-switch">
+      <button class="country-btn active" data-country="greece" data-i18n="greece">Greece · Halkidiki</button>
+      <button class="country-btn" data-country="romania" data-i18n="romania">Romania</button>
+    </div>
+
+    <div class="country-group active" id="greece">
+
+      <!-- THEASIS -->
+      <article class="project">
+        <a class="browser" href="https://www.theasisluxuryapartments.com" target="_blank" rel="noopener">
+          <div class="browser-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="url">theasisluxuryapartments.com</div>
+          </div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>Theasis</strong></div>
+            <img src="assets/Images/theasis.webp" alt="Theasis website preview"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Halkidiki · Greece</div>
+          <h3>Theasis</h3>
+        </div>
+      </article>
+
+      <!-- KLEO HOUSE -->
+      <article class="project">
+        <a class="browser" href="https://www.CleoHouse.homes" target="_blank" rel="noopener">
+          <div class="browser-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="url">CleoHouse.homes</div>
+          </div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>Kleo House</strong></div>
+            <img src="assets/Images/kleo.webp" alt="Kleo House website preview"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Halkidiki · Greece</div>
+          <h3>Kleo House</h3>
+        </div>
+      </article>
+
+      <!-- SEASHORE RESIDENCE -->
+      <article class="project seashore-card">
+        <a class="browser" href="https://www.SeaShoreResidence.com" target="_blank" rel="noopener">
+          <div class="browser-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="url">SeaShoreResidence.com</div>
+          </div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>SeaShore Residence</strong></div>
+            <img src="assets/Images/seashore.webp" alt="SeaShore Residence website preview"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Halkidiki · Greece</div>
+          <h3>SeaShore Residence</h3>
+
+          <article class="client-review static-review">
+            <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
+            <h4>Outstanding Service and Outstanding Results!</h4>
+            <div class="client-review-body">
+              <p class="client-review-text">Working with Gabriel on the website for my short-term rentals was an exceptional experience from start to finish. He demonstrated high professionalism, speed, and great attention to detail throughout the entire setup.</p>
+              <p class="client-review-text">The final result is modern, clean, fully functional, and perfectly tailored to our direct booking and legal requirements in Greece. Communication was seamless, clear, and efficient at every step. I highly recommend his services to anyone looking for a reliable, top-tier web developer!</p>
+            </div>
+            <div class="client-review-author">
+              <strong>Evanghelos</strong>
+              Owner · SeaShore Residence
+            </div>
+          </article>
+        </div>
+      </article>
+
+      <!-- ALMIRA BLUE -->
+      <article class="project">
+        <a class="browser" href="https://AlmiraBlue.gr" target="_blank" rel="noopener">
+          <div class="browser-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="url">AlmiraBlue.gr</div>
+          </div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>Almira Blue</strong></div>
+            <img src="assets/Images/almirablue.webp" alt="Almira Blue website preview"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Halkidiki · Greece</div>
+          <h3>Almira Blue</h3>
+        </div>
+      </article>
+
+      <!-- NAMASTE HOMES -->
+      <article class="project">
+        <a class="browser" href="https://www.NamasteHomes.gr" target="_blank" rel="noopener">
+          <div class="browser-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="url">NamasteHomes.gr</div>
+          </div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>Namaste Homes</strong></div>
+            <img src="assets/Images/namaste.webp" alt="Namaste Homes website preview"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Greece</div>
+          <h3>Namaste Homes</h3>
+        </div>
+
+      </article>
+
+      <div class="more-projects">
+        <div class="more-projects-head">
+          <span data-i18n="moreProjects">More projects are being added</span>
+          <span class="loading-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div class="skeleton-row">
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="country-group" id="romania">
+
+      <!-- CUCU RESIDENCE -->
+      <article class="project">
+        <a class="browser" href="https://www.cucuresidence.com/" target="_blank" rel="noopener">
+          <div class="browser-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="url">cucuresidence.com</div>
+          </div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>Cucu Residence</strong></div>
+            <img src="assets/Images/cucu.webp" alt="Cucu Residence website preview"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Brașov · Romania</div>
+          <h3>Cucu Residence</h3>
+        </div>
+      </article>
+
+      <!-- CENTRAL PREMIUM -->
+      <article class="project">
+        <a class="browser" href="https://centralpremium.accomodation.buzz/" target="_blank" rel="noopener">
+          <div class="browser-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="url">centralpremium.accomodation.buzz</div>
+          </div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>Central Premium Apartment</strong></div>
+            <img src="assets/Images/central.webp" alt="Central Premium Apartment website preview"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Brașov · Romania</div>
+          <h3>Central Premium Apartment</h3>
+        </div>
+
+      </article>
+
+      <div class="more-projects">
+        <div class="more-projects-head">
+          <span data-i18n="moreProjects">More projects are being added</span>
+          <span class="loading-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div class="skeleton-row">
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="services packages-section" id="services">
+  <div class="wrap">
+    <div class="packages-head">
+      <div>
+        <div class="packages-kicker" data-i18n="packagesKicker">Websites built to grow with your business</div>
+        <h2 data-i18n="packagesTitle">From a modern presentation to your own booking system.</h2>
+      </div>
+      <p data-i18n="packagesIntro">Start simple or build the complete direct-booking experience. Every website is designed mobile-first and adapted to the way your property actually works.</p>
+    </div>
+
+    <div class="package-grid">
+      <article class="package-card">
+        <div class="package-top">
+          <span class="package-num">01</span>
+          <span class="package-level" data-i18n="package1Level">Essential</span>
+        </div>
+        <h3 data-i18n="package1Title">Modern Presence</h3>
+        <p class="package-lead" data-i18n="package1Lead">A polished website that makes the property look professional, trustworthy and easy to contact.</p>
+        <ul class="package-features">
+          <li data-i18n="p1f1">Custom visual design</li>
+          <li data-i18n="p1f2">Property, rooms & facilities presentation</li>
+          <li data-i18n="p1f3">Photo galleries and location</li>
+          <li data-i18n="p1f4">WhatsApp & direct contact</li>
+          <li data-i18n="p1f5">Mobile-first responsive layout</li>
+          <li data-i18n="p1f6">Multilingual-ready structure</li>
+          <li data-i18n="p1f7">Basic SEO foundations</li>
+        </ul>
+        <a class="package-cta package-contact" href="#" target="_blank" rel="noopener" data-package="Modern Presence">
+          <span data-i18n="packageCta">Ask about this package</span><span>↗</span>
+        </a>
+      </article>
+
+      <article class="package-card package-card-featured">
+        <div class="package-ribbon" data-i18n="popular">Popular</div>
+        <div class="package-top">
+          <span class="package-num">02</span>
+          <span class="package-level" data-i18n="package2Level">Direct booking</span>
+        </div>
+        <h3 data-i18n="package2Title">Direct Booking</h3>
+        <p class="package-lead" data-i18n="package2Lead">Everything needed to turn your website into a direct enquiry and booking channel.</p>
+        <ul class="package-features">
+          <li data-i18n="p2f1">Everything in Modern Presence</li>
+          <li data-i18n="p2f2">Direct booking / enquiry flow</li>
+          <li data-i18n="p2f3">Booking requests via WhatsApp</li>
+          <li data-i18n="p2f4">Availability & enquiry forms</li>
+          <li data-i18n="p2f5">Seasonal rates and special offers</li>
+          <li data-i18n="p2f6">Policies, house rules & practical info</li>
+          <li data-i18n="p2f7">Conversion tracking & analytics setup</li>
+        </ul>
+        <a class="package-cta package-contact" href="#" target="_blank" rel="noopener" data-package="Direct Booking">
+          <span data-i18n="packageCta">Ask about this package</span><span>↗</span>
+        </a>
+      </article>
+
+      <article class="package-card package-card-pro">
+        <div class="package-pro-head">
+          <div>
+            <div class="package-top">
+              <span class="package-num">03</span>
+              <span class="package-level" data-i18n="package3Level">Full system</span>
+            </div>
+            <h3 data-i18n="package3Title">Booking Pro</h3>
+            <p class="package-lead" data-i18n="package3Lead">A complete direct-booking website with the tools to manage reservations, availability and guest relationships from your own digital ecosystem.</p>
+          </div>
+          <div class="package-pro-badge" data-i18n="package3Badge">Your own booking website</div>
+        </div>
+
+        <div class="package-pro-body">
+          <ul class="package-features">
+            <li data-i18n="p3f1">Everything in Direct Booking</li>
+            <li data-i18n="p3f2">Integrated booking engine</li>
+            <li data-i18n="p3f3">Availability calendar</li>
+            <li data-i18n="p3f4">iCal calendar sync with major platforms</li>
+            <li data-i18n="p3f5">Owner reservation dashboard</li>
+            <li data-i18n="p3f6">Rates, blocked dates & stay rules management</li>
+          </ul>
+          <ul class="package-features">
+            <li data-i18n="p3f7">Guest & lead database / CRM</li>
+            <li data-i18n="p3f8">GDPR-aware consent and contact capture</li>
+            <li data-i18n="p3f9">Automated booking confirmations</li>
+            <li data-i18n="p3f10">Optional deposits / online payment integration</li>
+            <li data-i18n="p3f11">Offers, promo codes & returning-guest campaigns</li>
+            <li data-i18n="p3f12">Analytics and direct-booking performance tracking</li>
+          </ul>
+        </div>
+
+        <a class="package-cta package-contact" href="#" target="_blank" rel="noopener" data-package="Booking Pro">
+          <span data-i18n="packageCtaPro">Discuss the complete system</span><span>↗</span>
+        </a>
+      </article>
+    </div>
+
+    <div class="included-strip">
+      <div class="included-copy">
+        <span class="included-label" data-i18n="includedLabel">Included with every package</span>
+        <strong data-i18n="includedTitle">The essentials are covered from day one.</strong>
+      </div>
+      <div class="included-items">
+        <span data-i18n="inc1">Domain & DNS setup</span>
+        <span data-i18n="inc2">Hosting & SSL</span>
+        <span data-i18n="inc3">Mobile-first design</span>
+        <span data-i18n="inc4">Maintenance</span>
+        <span data-i18n="inc5">Backups & security</span>
+        <span data-i18n="inc6">Technical support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2 data-i18n="ctaTitle">Your business deserves its own digital identity.</h2>
+        <p data-i18n="ctaText">
+          Tell us about your accommodation, restaurant or tourism business and we can build a presentation designed around it.
+        </p>
+      </div>
+      <a class="btn whatsapp-btn" id="whatsappContact" href="#" target="_blank" rel="noopener"><span class="wa-dot">●</span><span data-i18n="contactWhatsApp">WhatsApp us</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div>© <span id="year"></span> Gabriel Web Works</div>
+    <div data-i18n="footerText">Hospitality · Tourism · HoReCa</div>
+  </div>
+</footer>
+
+<script>
+const translations = {
+  en:{
+    packagesKicker:"Websites built to grow with your business",
+    packagesTitle:"From a modern presentation to your own booking system.",
+    packagesIntro:"Start simple or build the complete direct-booking experience. Every website is designed mobile-first and adapted to the way your property actually works.",
+    package1Level:"Essential",
+    package1Title:"Modern Presence",
+    package1Lead:"A polished website that makes the property look professional, trustworthy and easy to contact.",
+    p1f1:"Custom visual design",
+    p1f2:"Property, rooms & facilities presentation",
+    p1f3:"Photo galleries and location",
+    p1f4:"WhatsApp & direct contact",
+    p1f5:"Mobile-first responsive layout",
+    p1f6:"Multilingual-ready structure",
+    p1f7:"Basic SEO foundations",
+    package2Level:"Direct booking",
+    package2Title:"Direct Booking",
+    package2Lead:"Everything needed to turn your website into a direct enquiry and booking channel.",
+    p2f1:"Everything in Modern Presence",
+    p2f2:"Direct booking / enquiry flow",
+    p2f3:"Booking requests via WhatsApp",
+    p2f4:"Availability & enquiry forms",
+    p2f5:"Seasonal rates and special offers",
+    p2f6:"Policies, house rules & practical info",
+    p2f7:"Conversion tracking & analytics setup",
+    popular:"Popular",
+    package3Level:"Full system",
+    package3Title:"Booking Pro",
+    package3Lead:"A complete direct-booking website with the tools to manage reservations, availability and guest relationships from your own digital ecosystem.",
+    package3Badge:"Your own booking website",
+    p3f1:"Everything in Direct Booking",
+    p3f2:"Integrated booking engine",
+    p3f3:"Availability calendar",
+    p3f4:"iCal calendar sync with major platforms",
+    p3f5:"Owner reservation dashboard",
+    p3f6:"Rates, blocked dates & stay rules management",
+    p3f7:"Guest & lead database / CRM",
+    p3f8:"GDPR-aware consent and contact capture",
+    p3f9:"Automated booking confirmations",
+    p3f10:"Optional deposits / online payment integration",
+    p3f11:"Offers, promo codes & returning-guest campaigns",
+    p3f12:"Analytics and direct-booking performance tracking",
+    packageCta:"Ask about this package",
+    packageCtaPro:"Discuss the complete system",
+    includedLabel:"Included with every package",
+    includedTitle:"The essentials are covered from day one.",
+    inc1:"Domain & DNS setup",
+    inc2:"Hosting & SSL",
+    inc3:"Mobile-first design",
+    inc4:"Maintenance",
+    inc5:"Backups & security",
+    inc6:"Technical support",
+    navWork:"Work",navServices:"Services",navReviews:"Recommendations",navContact:"Contact",
+    heroKicker:"Hospitality · Tourism · HoReCa",
+    heroTitle:"Professional websites for hospitality.",
+    heroText:"Websites, branding and digital experiences created for accommodation and tourism businesses in Halkidiki, Greece, Romania and beyond.",
+    viewWork:"View our work",startProject:"Start a project",
+    heroProofTitle:"Real projects. Live websites.",heroProofText:"Built for hospitality businesses in Greece and Romania.",
+    heroCardTitle:"Real businesses.<br>Real websites.<br>Real recommendations.",
+    heroCardText:"We show the work itself, the live website and the words of the people we built it for.",
+    workTitle:"Selected websites",workText:"Every project is built around the property, its guests, its identity and the destination it belongs to.",
+    visitSiteBadge:"Visit website ↗",
+    greece:"Greece · Halkidiki",romania:"Romania",liveWebsite:"Live website",
+    tagWebsite:"Website",tagBranding:"Brand presentation",tagAccommodation:"Accommodation",tagGuestExperience:"Guest experience",
+    tagDirect:"Direct enquiries",tagVisual:"Visual presentation",tagMultiProperty:"Multi-property",
+    testimonialPending:"Client recommendation coming soon.",ownerPending:"Owner name",visitSite:"Visit website ↗",
+    clientRecommendation:"Client recommendation",
+    projectOverview:"Project overview",
+    moreProjects:"More projects are being added",
+    theasisSummary:"A clean hospitality presentation for luxury studios in Neos Marmaras, focused on the sea-view setting, easy studio discovery and a clear path to availability.",
+    kleoSummary:"A warm and elegant website for a holiday home in Kalyves, combining the property story, practical guest information and a strong off-season positioning.",
+    seashoreSummary:"A bold beachfront presentation for two stays in Perea, built around panoramic sea views and an immediate, simple choice between the available residences.",
+    almiraSummary:"A refined website for a two-bedroom holiday home near Nea Kallikratia, with strong visual identity, clear accommodation information and direct booking paths.",
+    namasteSummary:"A parent-brand experience connecting Thessaloniki and Halkidiki under one identity, with distinct journeys into each destination and property collection.",
+    cucuSummary:"A visual multilingual presentation for a Brașov residence, designed to communicate space, comfort and the flexibility of booking the property for families or groups.",
+    centralSummary:"A premium apartment website centred on the Tâmpa view, generous interior space, two bedrooms, two bathrooms and a direct route towards booking.",
+    servicesTitle:"More than a website.",servicesText:"From a first digital presence to a complete repositioning, every project can include the pieces the business actually needs.",
+    service1Title:"Professional websites",service1Text:"Modern, responsive websites built around the hospitality experience.",
+    service2Title:"Branding & rebranding",service2Text:"A stronger visual identity and a more coherent presentation of the business.",
+    service3Title:"Multilingual presence",service3Text:"Websites prepared for international guests and multiple markets.",
+    service4Title:"Guest experience",service4Text:"Useful information, destination content and direct enquiry flows that go beyond a simple brochure.",
+    reviewsTitle:"Recommended by owners",reviewsText:"Genuine recommendations from the people behind the properties and businesses we work with.",
+    ctaTitle:"Your business deserves its own digital identity.",ctaText:"Tell us about your accommodation, restaurant or tourism business and we can build a presentation designed around it.",
+    contactWhatsApp:"WhatsApp us",footerText:"Hospitality · Tourism · HoReCa"
+  },
+  ro:{
+    packagesKicker:"Website-uri construite să crească odată cu afacerea ta",
+    packagesTitle:"De la o prezentare modernă la propriul tău sistem de rezervări.",
+    packagesIntro:"Poți începe simplu sau poți construi experiența completă de rezervare directă. Fiecare website este gândit mobile-first și adaptat modului real în care funcționează proprietatea.",
+    package1Level:"Esențial",
+    package1Title:"Prezență Modernă",
+    package1Lead:"Un website elegant care prezintă proprietatea profesionist, inspiră încredere și face contactul foarte simplu.",
+    p1f1:"Design vizual personalizat",
+    p1f2:"Prezentarea proprietății, camerelor și facilităților",
+    p1f3:"Galerii foto și locație",
+    p1f4:"WhatsApp și contact direct",
+    p1f5:"Design responsive, optimizat pentru mobil",
+    p1f6:"Structură pregătită pentru mai multe limbi",
+    p1f7:"Bază SEO pentru vizibilitate",
+    package2Level:"Rezervări directe",
+    package2Title:"Direct Booking",
+    package2Lead:"Tot ce trebuie pentru ca website-ul să devină un canal real de cereri și rezervări directe.",
+    p2f1:"Tot ce include Prezență Modernă",
+    p2f2:"Flux pentru rezervări și cereri directe",
+    p2f3:"Cereri de rezervare prin WhatsApp",
+    p2f4:"Formulare pentru disponibilitate și rezervare",
+    p2f5:"Tarife sezoniere și oferte speciale",
+    p2f6:"Politici, reguli și informații practice",
+    p2f7:"Analytics și urmărirea conversiilor",
+    popular:"Popular",
+    package3Level:"Sistem complet",
+    package3Title:"Booking Pro",
+    package3Lead:"Un website complet de rezervări directe, cu instrumente pentru administrarea rezervărilor, disponibilității și relației cu oaspeții în propriul ecosistem digital.",
+    package3Badge:"Propriul tău website de booking",
+    p3f1:"Tot ce include Direct Booking",
+    p3f2:"Motor de rezervări integrat",
+    p3f3:"Calendar de disponibilitate",
+    p3f4:"Sincronizare iCal cu platformele importante",
+    p3f5:"Dashboard pentru administrarea rezervărilor",
+    p3f6:"Gestionarea tarifelor, datelor blocate și regulilor de ședere",
+    p3f7:"Bază de date clienți și lead-uri / CRM",
+    p3f8:"Colectare contacte și consimțământ GDPR",
+    p3f9:"Confirmări automate de rezervare",
+    p3f10:"Opțional: avansuri și plăți online",
+    p3f11:"Oferte, coduri promo și campanii pentru clienții care revin",
+    p3f12:"Analytics și monitorizarea rezervărilor directe",
+    packageCta:"Întreabă despre acest pachet",
+    packageCtaPro:"Discută sistemul complet",
+    includedLabel:"Inclus în fiecare pachet",
+    includedTitle:"Elementele esențiale sunt acoperite din prima zi.",
+    inc1:"Domeniu & configurare DNS",
+    inc2:"Hosting & SSL",
+    inc3:"Design mobile-first",
+    inc4:"Mentenanță",
+    inc5:"Backup & securitate",
+    inc6:"Suport tehnic",
+    navWork:"Proiecte",navServices:"Servicii",navReviews:"Recomandări",navContact:"Contact",
+    heroKicker:"Ospitalitate · Turism · HoReCa",
+    heroTitle:"Website-uri profesionale pentru ospitalitate.",
+    heroText:"Website-uri, branding și experiențe digitale create pentru cazări și afaceri din turism din Halkidiki, Grecia, România și nu numai.",
+    viewWork:"Vezi proiectele",startProject:"Începe un proiect",
+    heroProofTitle:"Proiecte reale. Website-uri live.",heroProofText:"Construite pentru afaceri din ospitalitate din Grecia și România.",
+    heroCardTitle:"Afaceri reale.<br>Website-uri reale.<br>Recomandări reale.",
+    heroCardText:"Arătăm proiectul, website-ul live și cuvintele oamenilor pentru care l-am construit.",
+    workTitle:"Website-uri selectate",workText:"Fiecare proiect este construit în jurul proprietății, oaspeților, identității și destinației sale.",
+    visitSiteBadge:"Vizitează website-ul ↗",
+    greece:"Grecia · Halkidiki",romania:"România",liveWebsite:"Website live",
+    tagWebsite:"Website",tagBranding:"Prezentare de brand",tagAccommodation:"Cazare",tagGuestExperience:"Experiență pentru oaspeți",
+    tagDirect:"Cereri directe",tagVisual:"Prezentare vizuală",tagMultiProperty:"Mai multe proprietăți",
+    testimonialPending:"Recomandarea proprietarului va fi adăugată în curând.",ownerPending:"Numele proprietarului",visitSite:"Vizitează website-ul ↗",
+    clientRecommendation:"Recomandarea clientului",
+    projectOverview:"Despre proiect",
+    moreProjects:"Se adaugă noi proiecte",
+    theasisSummary:"O prezentare curată pentru studiouri premium din Neos Marmaras, construită în jurul priveliștii spre mare, descoperirii rapide a studiourilor și accesului clar către disponibilitate.",
+    kleoSummary:"Un website cald și elegant pentru o casă de vacanță din Kalyves, care combină povestea proprietății, informațiile utile pentru oaspeți și poziționarea pentru perioadele din afara sezonului de vârf.",
+    seashoreSummary:"O prezentare puternic vizuală pentru două cazări pe malul mării în Perea, construită în jurul priveliștii panoramice și al alegerii simple între cele două unități.",
+    almiraSummary:"Un website rafinat pentru o casă de vacanță cu două dormitoare lângă Nea Kallikratia, cu identitate vizuală clară, informații bine structurate și acces direct către rezervare.",
+    namasteSummary:"O experiență de brand care unește Thessaloniki și Halkidiki sub aceeași identitate, cu trasee distincte către fiecare destinație și colecție de proprietăți.",
+    cucuSummary:"O prezentare vizuală și multilingvă pentru o proprietate din Brașov, gândită să transmită spațiul, confortul și flexibilitatea rezervării pentru familii sau grupuri.",
+    centralSummary:"Un website premium construit în jurul priveliștii spre Tâmpa, al spațiului generos, celor două dormitoare, celor două băi și al unui traseu simplu către rezervare.",
+    servicesTitle:"Mai mult decât un website.",servicesText:"De la prima prezență digitală până la o repoziționare completă, fiecare proiect poate include exact elementele de care afacerea are nevoie.",
+    service1Title:"Website-uri profesionale",service1Text:"Website-uri moderne și responsive construite în jurul experienței din ospitalitate.",
+    service2Title:"Branding & rebranding",service2Text:"O identitate vizuală mai puternică și o prezentare mai coerentă a afacerii.",
+    service3Title:"Prezență multilingvă",service3Text:"Website-uri pregătite pentru oaspeți internaționali și piețe diferite.",
+    service4Title:"Experiența oaspeților",service4Text:"Informații utile, conținut despre destinație și fluxuri de contact direct, dincolo de un simplu site de prezentare.",
+    reviewsTitle:"Recomandat de proprietari",reviewsText:"Recomandări autentice de la oamenii din spatele proprietăților și afacerilor cu care lucrăm.",
+    ctaTitle:"Afacerea ta merită propria identitate digitală.",ctaText:"Spune-ne despre cazarea, restaurantul sau afacerea ta din turism și putem construi o prezentare creată special pentru ea.",
+    contactWhatsApp:"Scrie-ne pe WhatsApp",footerText:"Ospitalitate · Turism · HoReCa"
+  },
+  el:{
+    packagesKicker:"Ιστοσελίδες που εξελίσσονται μαζί με την επιχείρησή σας",
+    packagesTitle:"Από μια σύγχρονη παρουσίαση έως το δικό σας σύστημα κρατήσεων.",
+    packagesIntro:"Ξεκινήστε απλά ή δημιουργήστε μια ολοκληρωμένη εμπειρία απευθείας κρατήσεων. Κάθε ιστοσελίδα σχεδιάζεται mobile-first και προσαρμόζεται στον τρόπο λειτουργίας του καταλύματός σας.",
+    package1Level:"Βασικό",
+    package1Title:"Modern Presence",
+    package1Lead:"Μια προσεγμένη ιστοσελίδα που παρουσιάζει επαγγελματικά το κατάλυμα και κάνει την επικοινωνία απλή.",
+    p1f1:"Προσαρμοσμένος οπτικός σχεδιασμός",
+    p1f2:"Παρουσίαση καταλύματος, δωματίων και παροχών",
+    p1f3:"Φωτογραφικές συλλογές και τοποθεσία",
+    p1f4:"WhatsApp και άμεση επικοινωνία",
+    p1f5:"Responsive σχεδιασμός με προτεραιότητα στο κινητό",
+    p1f6:"Δομή έτοιμη για πολλές γλώσσες",
+    p1f7:"Βασική δομή SEO",
+    package2Level:"Άμεσες κρατήσεις",
+    package2Title:"Direct Booking",
+    package2Lead:"Ό,τι χρειάζεται για να γίνει η ιστοσελίδα πραγματικό κανάλι άμεσων αιτημάτων και κρατήσεων.",
+    p2f1:"Όλα όσα περιλαμβάνει το Modern Presence",
+    p2f2:"Ροή άμεσης κράτησης / αιτήματος",
+    p2f3:"Αιτήματα κράτησης μέσω WhatsApp",
+    p2f4:"Φόρμες διαθεσιμότητας και αιτημάτων",
+    p2f5:"Εποχικές τιμές και ειδικές προσφορές",
+    p2f6:"Πολιτικές, κανόνες και πρακτικές πληροφορίες",
+    p2f7:"Analytics και παρακολούθηση μετατροπών",
+    popular:"Δημοφιλές",
+    package3Level:"Πλήρες σύστημα",
+    package3Title:"Booking Pro",
+    package3Lead:"Μια ολοκληρωμένη ιστοσελίδα απευθείας κρατήσεων με εργαλεία για διαχείριση κρατήσεων, διαθεσιμότητας και σχέσεων με επισκέπτες.",
+    package3Badge:"Η δική σας booking ιστοσελίδα",
+    p3f1:"Όλα όσα περιλαμβάνει το Direct Booking",
+    p3f2:"Ενσωματωμένη μηχανή κρατήσεων",
+    p3f3:"Ημερολόγιο διαθεσιμότητας",
+    p3f4:"Συγχρονισμός iCal με μεγάλες πλατφόρμες",
+    p3f5:"Dashboard διαχείρισης κρατήσεων",
+    p3f6:"Διαχείριση τιμών, κλειστών ημερομηνιών και κανόνων διαμονής",
+    p3f7:"Βάση επισκεπτών και leads / CRM",
+    p3f8:"Συγκατάθεση και συλλογή στοιχείων με γνώμονα το GDPR",
+    p3f9:"Αυτόματες επιβεβαιώσεις κρατήσεων",
+    p3f10:"Προαιρετικά: προκαταβολές και online πληρωμές",
+    p3f11:"Προσφορές, promo codes και καμπάνιες επαναλαμβανόμενων επισκεπτών",
+    p3f12:"Analytics και απόδοση απευθείας κρατήσεων",
+    packageCta:"Ρωτήστε για αυτό το πακέτο",
+    packageCtaPro:"Συζητήστε το πλήρες σύστημα",
+    includedLabel:"Περιλαμβάνεται σε κάθε πακέτο",
+    includedTitle:"Τα βασικά καλύπτονται από την πρώτη ημέρα.",
+    inc1:"Domain & DNS",
+    inc2:"Hosting & SSL",
+    inc3:"Mobile-first σχεδιασμός",
+    inc4:"Συντήρηση",
+    inc5:"Backups & ασφάλεια",
+    inc6:"Τεχνική υποστήριξη",
+    navWork:"Έργα",navServices:"Υπηρεσίες",navReviews:"Συστάσεις",navContact:"Επικοινωνία",
+    heroKicker:"Φιλοξενία · Τουρισμός · HoReCa",
+    heroTitle:"Επαγγελματικές ιστοσελίδες για τη φιλοξενία.",
+    heroText:"Ιστοσελίδες, branding και ψηφιακές εμπειρίες για καταλύματα και τουριστικές επιχειρήσεις στη Χαλκιδική, την Ελλάδα, τη Ρουμανία και πέρα από αυτές.",
+    viewWork:"Δείτε τα έργα μας",startProject:"Ξεκινήστε ένα έργο",
+    heroProofTitle:"Πραγματικά έργα. Ζωντανές ιστοσελίδες.",heroProofText:"Για επιχειρήσεις φιλοξενίας στην Ελλάδα και τη Ρουμανία.",
+    heroCardTitle:"Πραγματικές επιχειρήσεις.<br>Πραγματικές ιστοσελίδες.<br>Πραγματικές συστάσεις.",
+    heroCardText:"Παρουσιάζουμε το ίδιο το έργο, τη ζωντανή ιστοσελίδα και τα λόγια των ανθρώπων για τους οποίους τη δημιουργήσαμε.",
+    workTitle:"Επιλεγμένες ιστοσελίδες",workText:"Κάθε έργο σχεδιάζεται γύρω από το κατάλυμα, τους επισκέπτες, την ταυτότητα και τον προορισμό του.",
+    visitSiteBadge:"Επίσκεψη στην ιστοσελίδα ↗",
+    greece:"Ελλάδα · Χαλκιδική",romania:"Ρουμανία",liveWebsite:"Ζωντανή ιστοσελίδα",
+    tagWebsite:"Ιστοσελίδα",tagBranding:"Παρουσίαση brand",tagAccommodation:"Κατάλυμα",tagGuestExperience:"Εμπειρία επισκέπτη",
+    tagDirect:"Άμεσες αιτήσεις",tagVisual:"Οπτική παρουσίαση",tagMultiProperty:"Πολλαπλά καταλύματα",
+    testimonialPending:"Η σύσταση του πελάτη θα προστεθεί σύντομα.",ownerPending:"Όνομα ιδιοκτήτη",visitSite:"Επίσκεψη στην ιστοσελίδα ↗",
+    clientRecommendation:"Σύσταση πελάτη",
+    projectOverview:"Σχετικά με το έργο",
+    moreProjects:"Προστίθενται νέα έργα",
+    theasisSummary:"Μια καθαρή παρουσίαση φιλοξενίας για πολυτελή studios στον Νέο Μαρμαρά, με έμφαση στη θέα στη θάλασσα, την εύκολη ανακάλυψη των studios και τη διαθεσιμότητα.",
+    kleoSummary:"Μια ζεστή και κομψή ιστοσελίδα για εξοχική κατοικία στις Καλύβες, που συνδυάζει την ιστορία του ακινήτου, χρήσιμες πληροφορίες για τους επισκέπτες και ισχυρή παρουσία εκτός υψηλής σεζόν.",
+    seashoreSummary:"Μια δυναμική παραθαλάσσια παρουσίαση για δύο διαμονές στην Περαία, βασισμένη στην πανοραμική θέα και στην άμεση επιλογή μεταξύ των διαθέσιμων κατοικιών.",
+    almiraSummary:"Μια κομψή ιστοσελίδα για εξοχική κατοικία δύο υπνοδωματίων κοντά στη Νέα Καλλικράτεια, με ισχυρή οπτική ταυτότητα, σαφείς πληροφορίες και άμεση πρόσβαση στην κράτηση.",
+    namasteSummary:"Μια ενιαία εμπειρία brand που συνδέει τη Θεσσαλονίκη και τη Χαλκιδική, με ξεχωριστές διαδρομές προς κάθε προορισμό και συλλογή καταλυμάτων.",
+    cucuSummary:"Μια οπτική και πολυγλωσσική παρουσίαση για κατοικία στο Μπρασόβ, σχεδιασμένη να αναδεικνύει τον χώρο, την άνεση και την ευελιξία για οικογένειες ή ομάδες.",
+    centralSummary:"Μια premium ιστοσελίδα διαμερίσματος με επίκεντρο τη θέα προς την Τάμπα, τους άνετους χώρους, τα δύο υπνοδωμάτια, τα δύο μπάνια και την άμεση κράτηση.",
+    servicesTitle:"Περισσότερα από μια ιστοσελίδα.",servicesText:"Από την πρώτη ψηφιακή παρουσία έως μια ολοκληρωμένη επανατοποθέτηση, κάθε έργο μπορεί να περιλαμβάνει ό,τι πραγματικά χρειάζεται η επιχείρηση.",
+    service1Title:"Επαγγελματικές ιστοσελίδες",service1Text:"Σύγχρονες responsive ιστοσελίδες σχεδιασμένες γύρω από την εμπειρία φιλοξενίας.",
+    service2Title:"Branding & rebranding",service2Text:"Ισχυρότερη οπτική ταυτότητα και πιο συνεκτική παρουσίαση της επιχείρησης.",
+    service3Title:"Πολυγλωσσική παρουσία",service3Text:"Ιστοσελίδες έτοιμες για διεθνείς επισκέπτες και διαφορετικές αγορές.",
+    service4Title:"Εμπειρία επισκέπτη",service4Text:"Χρήσιμες πληροφορίες, περιεχόμενο προορισμού και άμεσες ροές επικοινωνίας πέρα από μια απλή παρουσίαση.",
+    reviewsTitle:"Συστάσεις από ιδιοκτήτες",reviewsText:"Αυθεντικές συστάσεις από τους ανθρώπους πίσω από τα καταλύματα και τις επιχειρήσεις με τις οποίες συνεργαζόμαστε.",
+    ctaTitle:"Η επιχείρησή σας αξίζει τη δική της ψηφιακή ταυτότητα.",ctaText:"Πείτε μας για το κατάλυμα, το εστιατόριο ή την τουριστική σας επιχείρηση και θα δημιουργήσουμε μια παρουσίαση προσαρμοσμένη σε αυτή.",
+    contactWhatsApp:"Στείλτε μας στο WhatsApp",footerText:"Φιλοξενία · Τουρισμός · HoReCa"
+  },
+  de:{
+    packagesKicker:"Websites, die mit Ihrem Betrieb wachsen",
+    packagesTitle:"Von der modernen Präsentation bis zum eigenen Buchungssystem.",
+    packagesIntro:"Starten Sie einfach oder bauen Sie ein vollständiges Direct-Booking-Erlebnis. Jede Website wird mobile-first entwickelt und an den tatsächlichen Ablauf Ihrer Unterkunft angepasst.",
+    package1Level:"Basis",
+    package1Title:"Modern Presence",
+    package1Lead:"Eine hochwertige Website, die Ihre Unterkunft professionell präsentiert, Vertrauen schafft und Kontakt einfach macht.",
+    p1f1:"Individuelles visuelles Design",
+    p1f2:"Präsentation von Unterkunft, Zimmern und Ausstattung",
+    p1f3:"Fotogalerien und Standort",
+    p1f4:"WhatsApp und direkter Kontakt",
+    p1f5:"Mobile-first Responsive Design",
+    p1f6:"Mehrsprachig vorbereitete Struktur",
+    p1f7:"SEO-Grundlagen",
+    package2Level:"Direktbuchung",
+    package2Title:"Direct Booking",
+    package2Lead:"Alles, was Ihre Website zu einem echten Kanal für direkte Anfragen und Buchungen macht.",
+    p2f1:"Alles aus Modern Presence",
+    p2f2:"Direkte Buchungs- und Anfragewege",
+    p2f3:"Buchungsanfragen über WhatsApp",
+    p2f4:"Verfügbarkeits- und Anfrageformulare",
+    p2f5:"Saisonpreise und Sonderangebote",
+    p2f6:"Richtlinien, Hausregeln und praktische Infos",
+    p2f7:"Analytics und Conversion-Tracking",
+    popular:"Beliebt",
+    package3Level:"Komplettsystem",
+    package3Title:"Booking Pro",
+    package3Lead:"Eine vollständige Direct-Booking-Website mit Werkzeugen für Reservierungen, Verfügbarkeit und Gästebeziehungen im eigenen digitalen System.",
+    package3Badge:"Ihre eigene Buchungswebsite",
+    p3f1:"Alles aus Direct Booking",
+    p3f2:"Integrierte Buchungsengine",
+    p3f3:"Verfügbarkeitskalender",
+    p3f4:"iCal-Synchronisierung mit großen Plattformen",
+    p3f5:"Dashboard für Reservierungen",
+    p3f6:"Preise, Sperrdaten und Aufenthaltsregeln verwalten",
+    p3f7:"Gäste- und Lead-Datenbank / CRM",
+    p3f8:"GDPR-bewusste Einwilligung und Kontakterfassung",
+    p3f9:"Automatische Buchungsbestätigungen",
+    p3f10:"Optional: Anzahlungen und Online-Zahlungen",
+    p3f11:"Angebote, Promo-Codes und Kampagnen für Stammgäste",
+    p3f12:"Analytics und Direct-Booking-Performance",
+    packageCta:"Dieses Paket anfragen",
+    packageCtaPro:"Komplettsystem besprechen",
+    includedLabel:"In jedem Paket enthalten",
+    includedTitle:"Die Grundlagen sind vom ersten Tag an abgedeckt.",
+    inc1:"Domain & DNS",
+    inc2:"Hosting & SSL",
+    inc3:"Mobile-first Design",
+    inc4:"Wartung",
+    inc5:"Backups & Sicherheit",
+    inc6:"Technischer Support",
+    navWork:"Projekte",navServices:"Leistungen",navReviews:"Empfehlungen",navContact:"Kontakt",
+    heroKicker:"Gastgewerbe · Tourismus · HoReCa",
+    heroTitle:"Professionelle Websites für Gastgeber.",
+    heroText:"Websites, Branding und digitale Erlebnisse für Unterkünfte und Tourismusbetriebe in Chalkidiki, Griechenland, Rumänien und darüber hinaus.",
+    viewWork:"Projekte ansehen",startProject:"Projekt starten",
+    heroProofTitle:"Echte Projekte. Live-Websites.",heroProofText:"Für Hospitality-Betriebe in Griechenland und Rumänien.",
+    heroCardTitle:"Echte Betriebe.<br>Echte Websites.<br>Echte Empfehlungen.",
+    heroCardText:"Wir zeigen die Arbeit selbst, die Live-Website und die Worte der Menschen, für die wir sie erstellt haben.",
+    workTitle:"Ausgewählte Websites",workText:"Jedes Projekt wird rund um die Unterkunft, ihre Gäste, ihre Identität und ihr Reiseziel entwickelt.",
+    visitSiteBadge:"Website besuchen ↗",
+    greece:"Griechenland · Chalkidiki",romania:"Rumänien",liveWebsite:"Live-Website",
+    tagWebsite:"Website",tagBranding:"Markenpräsentation",tagAccommodation:"Unterkunft",tagGuestExperience:"Gästeerlebnis",
+    tagDirect:"Direkte Anfragen",tagVisual:"Visuelle Präsentation",tagMultiProperty:"Mehrere Unterkünfte",
+    testimonialPending:"Die Empfehlung des Kunden folgt in Kürze.",ownerPending:"Name des Eigentümers",visitSite:"Website besuchen ↗",
+    clientRecommendation:"Kundenempfehlung",
+    projectOverview:"Projektübersicht",
+    moreProjects:"Weitere Projekte werden hinzugefügt",
+    theasisSummary:"Eine klare Hospitality-Präsentation für luxuriöse Studios in Neos Marmaras, mit Fokus auf Meerblick, einfache Studio-Auswahl und einen direkten Weg zur Verfügbarkeit.",
+    kleoSummary:"Eine warme und elegante Website für ein Ferienhaus in Kalyves, die Immobiliengeschichte, praktische Gästeinformationen und eine starke Positionierung außerhalb der Hochsaison verbindet.",
+    seashoreSummary:"Eine starke Beachfront-Präsentation für zwei Unterkünfte in Perea, aufgebaut rund um den Panoramablick aufs Meer und eine einfache Auswahl zwischen den beiden Einheiten.",
+    almiraSummary:"Eine hochwertige Website für ein Ferienhaus mit zwei Schlafzimmern nahe Nea Kallikratia, mit klarer visueller Identität, gut strukturierten Informationen und direkten Buchungswegen.",
+    namasteSummary:"Ein Markenerlebnis, das Thessaloniki und Chalkidiki unter einer Identität verbindet und klare Wege zu jeder Destination und Unterkunftskollektion bietet.",
+    cucuSummary:"Eine visuelle, mehrsprachige Präsentation für eine Unterkunft in Brașov, die Raum, Komfort und flexible Buchungsmöglichkeiten für Familien oder Gruppen vermittelt.",
+    centralSummary:"Eine Premium-Apartment-Website rund um den Blick auf den Tâmpa, großzügige Räume, zwei Schlafzimmer, zwei Bäder und einen direkten Weg zur Buchung.",
+    servicesTitle:"Mehr als eine Website.",servicesText:"Vom ersten digitalen Auftritt bis zur vollständigen Neupositionierung kann jedes Projekt genau die Bausteine enthalten, die der Betrieb wirklich braucht.",
+    service1Title:"Professionelle Websites",service1Text:"Moderne responsive Websites, entwickelt rund um das Gästeerlebnis.",
+    service2Title:"Branding & Rebranding",service2Text:"Eine stärkere visuelle Identität und eine stimmigere Präsentation des Betriebs.",
+    service3Title:"Mehrsprachige Präsenz",service3Text:"Websites für internationale Gäste und unterschiedliche Märkte.",
+    service4Title:"Gästeerlebnis",service4Text:"Nützliche Informationen, Destinationsinhalte und direkte Kontaktwege über eine einfache Präsentationsseite hinaus.",
+    reviewsTitle:"Von Eigentümern empfohlen",reviewsText:"Echte Empfehlungen von den Menschen hinter den Unterkünften und Betrieben, mit denen wir arbeiten.",
+    ctaTitle:"Ihr Betrieb verdient eine eigene digitale Identität.",ctaText:"Erzählen Sie uns von Ihrer Unterkunft, Ihrem Restaurant oder Tourismusbetrieb – wir entwickeln eine Präsentation, die dazu passt.",
+    contactWhatsApp:"Schreiben Sie uns auf WhatsApp",footerText:"Gastgewerbe · Tourismus · HoReCa"
+  },
+  bg:{
+    packagesKicker:"Уебсайтове, които растат заедно с бизнеса ви",
+    packagesTitle:"От модерно представяне до собствена система за резервации.",
+    packagesIntro:"Започнете с базова версия или изградете пълно директно резервиране. Всеки сайт е mobile-first и е адаптиран към реалния начин на работа на обекта.",
+    package1Level:"Основен",
+    package1Title:"Modern Presence",
+    package1Lead:"Професионален сайт, който представя обекта убедително и улеснява директния контакт.",
+    p1f1:"Персонализиран визуален дизайн",
+    p1f2:"Представяне на имота, стаите и удобствата",
+    p1f3:"Фото галерии и локация",
+    p1f4:"WhatsApp и директен контакт",
+    p1f5:"Mobile-first responsive дизайн",
+    p1f6:"Структура за много езици",
+    p1f7:"Основи на SEO",
+    package2Level:"Директни резервации",
+    package2Title:"Direct Booking",
+    package2Lead:"Всичко необходимо сайтът да се превърне в реален канал за директни запитвания и резервации.",
+    p2f1:"Всичко от Modern Presence",
+    p2f2:"Поток за директни резервации / запитвания",
+    p2f3:"Заявки за резервация през WhatsApp",
+    p2f4:"Форми за наличност и запитване",
+    p2f5:"Сезонни цени и специални оферти",
+    p2f6:"Политики, правила и практична информация",
+    p2f7:"Analytics и проследяване на конверсии",
+    popular:"Популярно",
+    package3Level:"Пълна система",
+    package3Title:"Booking Pro",
+    package3Lead:"Цялостен сайт за директни резервации с инструменти за управление на резервации, наличности и отношения с гостите.",
+    package3Badge:"Ваш собствен booking сайт",
+    p3f1:"Всичко от Direct Booking",
+    p3f2:"Интегрирана booking система",
+    p3f3:"Календар за наличност",
+    p3f4:"iCal синхронизация с основни платформи",
+    p3f5:"Dashboard за резервации",
+    p3f6:"Управление на цени, блокирани дати и правила",
+    p3f7:"База гости и leads / CRM",
+    p3f8:"GDPR-съобразено съгласие и събиране на контакти",
+    p3f9:"Автоматични потвърждения",
+    p3f10:"По избор: депозити и онлайн плащания",
+    p3f11:"Оферти, promo кодове и кампании за повторни гости",
+    p3f12:"Analytics и ефективност на директните резервации",
+    packageCta:"Попитайте за този пакет",
+    packageCtaPro:"Обсъдете пълната система",
+    includedLabel:"Включено във всеки пакет",
+    includedTitle:"Основните неща са покрити от първия ден.",
+    inc1:"Домейн & DNS",
+    inc2:"Hosting & SSL",
+    inc3:"Mobile-first дизайн",
+    inc4:"Поддръжка",
+    inc5:"Backups & сигурност",
+    inc6:"Техническа поддръжка",
+    navWork:"Проекти",navServices:"Услуги",navReviews:"Препоръки",navContact:"Контакт",
+    heroKicker:"Хотелиерство · Туризъм · HoReCa",
+    heroTitle:"Професионални уебсайтове за хотелиерския бизнес.",
+    heroText:"Уебсайтове, брандинг и дигитални преживявания за места за настаняване и туристически бизнеси в Халкидики, Гърция, Румъния и извън тях.",
+    viewWork:"Вижте проектите",startProject:"Започнете проект",
+    heroProofTitle:"Реални проекти. Активни уебсайтове.",heroProofText:"За бизнеси в сферата на гостоприемството в Гърция и Румъния.",
+    heroCardTitle:"Реални бизнеси.<br>Реални уебсайтове.<br>Реални препоръки.",
+    heroCardText:"Показваме самия проект, живия уебсайт и думите на хората, за които сме го създали.",
+    workTitle:"Избрани уебсайтове",workText:"Всеки проект се изгражда около мястото, неговите гости, идентичността и дестинацията.",
+    visitSiteBadge:"Посетете уебсайта ↗",
+    greece:"Гърция · Халкидики",romania:"Румъния",liveWebsite:"Активен уебсайт",
+    tagWebsite:"Уебсайт",tagBranding:"Представяне на бранда",tagAccommodation:"Настаняване",tagGuestExperience:"Изживяване за гостите",
+    tagDirect:"Директни запитвания",tagVisual:"Визуално представяне",tagMultiProperty:"Няколко обекта",
+    testimonialPending:"Препоръката от клиента ще бъде добавена скоро.",ownerPending:"Име на собственика",visitSite:"Посетете уебсайта ↗",
+    clientRecommendation:"Препоръка от клиент",
+    projectOverview:"За проекта",
+    moreProjects:"Добавят се още проекти",
+    theasisSummary:"Изчистено представяне за луксозни студиа в Неос Мармарас, с акцент върху морската гледка, лесния избор на студио и ясния път към проверка на наличността.",
+    kleoSummary:"Топъл и елегантен уебсайт за ваканционен дом в Каливес, съчетаващ историята на имота, полезна информация за гостите и силно позициониране извън активния сезон.",
+    seashoreSummary:"Силно визуално представяне на две крайморски места за настаняване в Переа, изградено около панорамната морска гледка и лесния избор между двете единици.",
+    almiraSummary:"Изискан уебсайт за ваканционен дом с две спални близо до Неа Каликратия, с ясна визуална идентичност, добре структурирана информация и директни пътища към резервация.",
+    namasteSummary:"Единно бранд изживяване, което свързва Солун и Халкидики под една идентичност, с отделни пътища към всяка дестинация и колекция от имоти.",
+    cucuSummary:"Визуално и многоезично представяне на имот в Брашов, създадено да показва пространството, комфорта и гъвкавостта за семейства или групи.",
+    centralSummary:"Премиум уебсайт за апартамент, изграден около гледката към Тъмпа, просторния интериор, двете спални, двете бани и лесния път към резервация.",
+    servicesTitle:"Повече от уебсайт.",servicesText:"От първото дигитално присъствие до цялостно препозициониране, всеки проект може да включва точно това, от което бизнесът има нужда.",
+    service1Title:"Професионални уебсайтове",service1Text:"Модерни responsive уебсайтове, изградени около преживяването на гостите.",
+    service2Title:"Брандинг и ребрандинг",service2Text:"По-силна визуална идентичност и по-последователно представяне на бизнеса.",
+    service3Title:"Многоезично присъствие",service3Text:"Уебсайтове, подготвени за международни гости и различни пазари.",
+    service4Title:"Изживяване за гостите",service4Text:"Полезна информация, съдържание за дестинацията и директни канали за запитвания отвъд обикновен презентационен сайт.",
+    reviewsTitle:"Препоръчано от собственици",reviewsText:"Истински препоръки от хората зад местата и бизнесите, с които работим.",
+    ctaTitle:"Вашият бизнес заслужава собствена дигитална идентичност.",ctaText:"Разкажете ни за вашето място за настаняване, ресторант или туристически бизнес и ще създадем представяне специално за него.",
+    contactWhatsApp:"Пишете ни в WhatsApp",footerText:"Хотелиерство · Туризъм · HoReCa"
+  },
+  sr:{
+    packagesKicker:"Sajtovi koji rastu zajedno sa vašim biznisom",
+    packagesTitle:"Od moderne prezentacije do sopstvenog sistema za rezervacije.",
+    packagesIntro:"Počnite jednostavno ili napravite kompletno direct-booking iskustvo. Svaki sajt je mobile-first i prilagođen stvarnom načinu rada objekta.",
+    package1Level:"Osnovni",
+    package1Title:"Modern Presence",
+    package1Lead:"Profesionalan sajt koji objekat predstavlja moderno, gradi poverenje i olakšava direktan kontakt.",
+    p1f1:"Prilagođen vizuelni dizajn",
+    p1f2:"Prezentacija objekta, soba i sadržaja",
+    p1f3:"Foto galerije i lokacija",
+    p1f4:"WhatsApp i direktan kontakt",
+    p1f5:"Mobile-first responsive dizajn",
+    p1f6:"Struktura spremna za više jezika",
+    p1f7:"Osnovni SEO",
+    package2Level:"Direktne rezervacije",
+    package2Title:"Direct Booking",
+    package2Lead:"Sve što je potrebno da sajt postane pravi kanal za direktne upite i rezervacije.",
+    p2f1:"Sve iz Modern Presence paketa",
+    p2f2:"Tok direktne rezervacije / upita",
+    p2f3:"Zahtevi za rezervaciju preko WhatsApp-a",
+    p2f4:"Forme za dostupnost i upite",
+    p2f5:"Sezonske cene i posebne ponude",
+    p2f6:"Pravila, uslovi i praktične informacije",
+    p2f7:"Analytics i praćenje konverzija",
+    popular:"Popularno",
+    package3Level:"Kompletan sistem",
+    package3Title:"Booking Pro",
+    package3Lead:"Kompletan direct-booking sajt sa alatima za upravljanje rezervacijama, dostupnošću i odnosom sa gostima.",
+    package3Badge:"Vaš sopstveni booking sajt",
+    p3f1:"Sve iz Direct Booking paketa",
+    p3f2:"Integrisani booking engine",
+    p3f3:"Kalendar dostupnosti",
+    p3f4:"iCal sinhronizacija sa glavnim platformama",
+    p3f5:"Dashboard za rezervacije",
+    p3f6:"Upravljanje cenama, blokiranim datumima i pravilima boravka",
+    p3f7:"Baza gostiju i lead-ova / CRM",
+    p3f8:"GDPR-prilagođena saglasnost i prikupljanje kontakata",
+    p3f9:"Automatske potvrde rezervacija",
+    p3f10:"Opciono: depoziti i online plaćanja",
+    p3f11:"Ponude, promo kodovi i kampanje za povratne goste",
+    p3f12:"Analytics i praćenje direct-booking rezultata",
+    packageCta:"Pitajte za ovaj paket",
+    packageCtaPro:"Razgovarajte o kompletnom sistemu",
+    includedLabel:"Uključeno u svaki paket",
+    includedTitle:"Osnovne stvari su pokrivene od prvog dana.",
+    inc1:"Domen & DNS",
+    inc2:"Hosting & SSL",
+    inc3:"Mobile-first dizajn",
+    inc4:"Održavanje",
+    inc5:"Backups & sigurnost",
+    inc6:"Tehnička podrška",
+    navWork:"Projekti",navServices:"Usluge",navReviews:"Preporuke",navContact:"Kontakt",
+    heroKicker:"Ugostiteljstvo · Turizam · HoReCa",
+    heroTitle:"Profesionalni sajtovi za ugostiteljstvo.",
+    heroText:"Web sajtovi, brending i digitalna iskustva za smeštaj i turističke biznise na Halkidikiju, u Grčkoj, Rumuniji i šire.",
+    viewWork:"Pogledajte projekte",startProject:"Pokrenite projekat",
+    heroProofTitle:"Pravi projekti. Aktivni sajtovi.",heroProofText:"Za ugostiteljske biznise u Grčkoj i Rumuniji.",
+    heroCardTitle:"Pravi biznisi.<br>Pravi sajtovi.<br>Prave preporuke.",
+    heroCardText:"Prikazujemo sam projekat, aktivni sajt i reči ljudi za koje smo ga napravili.",
+    workTitle:"Odabrani sajtovi",workText:"Svaki projekat gradimo oko objekta, njegovih gostiju, identiteta i destinacije.",
+    visitSiteBadge:"Posetite sajt ↗",
+    greece:"Grčka · Halkidiki",romania:"Rumunija",liveWebsite:"Aktivan sajt",
+    tagWebsite:"Web sajt",tagBranding:"Predstavljanje brenda",tagAccommodation:"Smeštaj",tagGuestExperience:"Iskustvo gostiju",
+    tagDirect:"Direktni upiti",tagVisual:"Vizuelna prezentacija",tagMultiProperty:"Više objekata",
+    testimonialPending:"Preporuka klijenta biće dodata uskoro.",ownerPending:"Ime vlasnika",visitSite:"Posetite sajt ↗",
+    clientRecommendation:"Preporuka klijenta",
+    projectOverview:"O projektu",
+    moreProjects:"Dodaju se novi projekti",
+    theasisSummary:"Čista prezentacija luksuznih studija u Neos Marmarasu, sa fokusom na pogled na more, jednostavan izbor studija i jasan put do provere dostupnosti.",
+    kleoSummary:"Topao i elegantan sajt za kuću za odmor u Kalyvesu, koji spaja priču o objektu, korisne informacije za goste i snažno pozicioniranje van glavne sezone.",
+    seashoreSummary:"Vizuelno snažna prezentacija dva smeštaja uz more u Perei, izgrađena oko panoramskog pogleda i jednostavnog izbora između dve jedinice.",
+    almiraSummary:"Prefinjen sajt za kuću za odmor sa dve spavaće sobe blizu Nea Kallikratije, sa jasnim vizuelnim identitetom, dobro organizovanim informacijama i direktnim putem ka rezervaciji.",
+    namasteSummary:"Jedinstveno brend iskustvo koje povezuje Solun i Halkidiki pod jednim identitetom, sa odvojenim putanjama ka svakoj destinaciji i kolekciji smeštaja.",
+    cucuSummary:"Vizuelna i višejezična prezentacija objekta u Brašovu, osmišljena da prenese prostor, udobnost i fleksibilnost rezervacije za porodice ili grupe.",
+    centralSummary:"Premium sajt apartmana fokusiran na pogled ka Tâmpi, prostran enterijer, dve spavaće sobe, dva kupatila i jednostavan put ka rezervaciji.",
+    servicesTitle:"Više od web sajta.",servicesText:"Od prvog digitalnog prisustva do potpunog repozicioniranja, svaki projekat može da uključi upravo ono što je biznisu potrebno.",
+    service1Title:"Profesionalni sajtovi",service1Text:"Moderni responsive sajtovi izgrađeni oko iskustva gosta.",
+    service2Title:"Brending i rebrending",service2Text:"Jači vizuelni identitet i doslednija prezentacija biznisa.",
+    service3Title:"Višejezično prisustvo",service3Text:"Sajtovi pripremljeni za međunarodne goste i različita tržišta.",
+    service4Title:"Iskustvo gostiju",service4Text:"Korisne informacije, sadržaj o destinaciji i direktni tokovi upita koji prevazilaze običan prezentacioni sajt.",
+    reviewsTitle:"Preporuke vlasnika",reviewsText:"Autentične preporuke ljudi koji stoje iza objekata i biznisa sa kojima sarađujemo.",
+    ctaTitle:"Vaš biznis zaslužuje sopstveni digitalni identitet.",ctaText:"Recite nam više o svom smeštaju, restoranu ili turističkom biznisu i napravićemo prezentaciju prilagođenu upravo njemu.",
+    contactWhatsApp:"Pišite nam na WhatsApp",footerText:"Ugostiteljstvo · Turizam · HoReCa"
+  }
+};
+
+
+const whatsappNumber = "407555687226";
+
+const whatsappMessages = {
+  ro:"Bună! Sunt interesat(ă) de un website pentru afacerea mea din HoReCa / turism.",
+  en:"Hello! I am interested in a website for my hospitality / tourism business.",
+  el:"Γεια σας! Ενδιαφέρομαι για μια ιστοσελίδα για την επιχείρησή μου στον χώρο της φιλοξενίας / τουρισμού.",
+  de:"Hallo! Ich interessiere mich für eine Website für mein Unternehmen im Gastgewerbe / Tourismus.",
+  bg:"Здравейте! Интересувам се от уебсайт за моя бизнес в сферата на хотелиерството / туризма.",
+  sr:"Zdravo! Zainteresovan/a sam za web sajt za svoj biznis u ugostiteljstvu / turizmu."
+};
+
+function updateWhatsAppLink(lang){
+  const btn = document.getElementById("whatsappContact");
+  if(!btn) return;
+  const message = whatsappMessages[lang] || whatsappMessages.en;
+  btn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
+
+function updatePackageLinks(lang){
+  const packageTexts = {
+    ro:"Bună! Sunt interesat(ă) de pachetul {package} pentru website-ul proprietății mele.",
+    en:"Hello! I am interested in the {package} package for my property website.",
+    el:"Γεια σας! Ενδιαφέρομαι για το πακέτο {package} για την ιστοσελίδα του καταλύματός μου.",
+    de:"Hallo! Ich interessiere mich für das Paket {package} für die Website meiner Unterkunft.",
+    bg:"Здравейте! Интересувам се от пакета {package} за уебсайта на моя обект.",
+    sr:"Zdravo! Zainteresovan/a sam za paket {package} za sajt svog objekta."
+  };
+  document.querySelectorAll(".package-contact").forEach(link=>{
+    const template = packageTexts[lang] || packageTexts.en;
+    const message = template.replace("{package}", link.dataset.package || "");
+    link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  });
+}
+
+const langs = {
+  ro:{flag:"assets/Icons/flag_ro.webp",emoji:"🇷🇴"},
+  en:{flag:"assets/Icons/flag_en.webp",emoji:"🇬🇧"},
+  el:{flag:"assets/Icons/flag_gr.webp",emoji:"🇬🇷"},
+  de:{flag:"assets/Icons/flag_de.webp",emoji:"🇩🇪"},
+  bg:{flag:"assets/Icons/flag_bg.webp",emoji:"🇧🇬"},
+  sr:{flag:"assets/Icons/flag_rs.webp",emoji:"🇷🇸"}
+};
+
+let currentLang = localStorage.getItem("portfolioLang") || "en";
+
+function updateLanguage(lang){
+  if(!translations[lang]) lang="en";
+  currentLang=lang;
+  localStorage.setItem("portfolioLang",lang);
+  document.documentElement.lang=lang;
+  updateWhatsAppLink(lang);
+  updatePackageLinks(lang);
+
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.dataset.i18n;
+    if(translations[lang][key] !== undefined){
+      el.innerHTML=translations[lang][key];
+    }
+  });
+
+  const info=langs[lang];
+  const current=document.getElementById("langCurrent");
+  current.innerHTML=`<img src="${info.flag}" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="lang-fallback" style="display:none">${info.emoji}</span>`;
+}
+
+document.getElementById("langCurrent").addEventListener("click",()=>{
+  document.getElementById("langPicker").classList.toggle("open");
+});
+
+document.querySelectorAll(".lang-option").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    updateLanguage(btn.dataset.lang);
+    document.getElementById("langPicker").classList.remove("open");
+  });
+});
+
+document.addEventListener("click",(e)=>{
+  const picker=document.getElementById("langPicker");
+  if(!picker.contains(e.target)) picker.classList.remove("open");
+});
+
+document.querySelectorAll(".country-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".country-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".country-group").forEach(g=>g.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.country).classList.add("active");
+  });
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+updateLanguage(currentLang);
+</script>
+
+</body>
+</html>
