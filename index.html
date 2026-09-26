@@ -1354,6 +1354,214 @@ footer{
   .included-items span{font-size:.68rem}
 }
 
+
+/* ================================================================
+   FEATURED CLIENT PROJECT — SEASHORE RESIDENCE
+   Wider project, balanced image + review, no wasted white space
+   ================================================================ */
+@media (min-width:1001px){
+  .featured-review-project{
+    width:min(1340px, calc(100vw - 36px));
+    margin-left:50%;
+    transform:translateX(-50%);
+    grid-template-columns:minmax(0,1.55fr) minmax(390px,.78fr);
+    gap:20px;
+    padding:16px;
+    align-items:stretch;
+  }
+
+  .featured-review-project:hover{
+    transform:translateX(-50%) translateY(-4px);
+  }
+
+  .featured-review-project > .browser{
+    height:100%;
+    min-height:540px;
+    display:flex;
+    flex-direction:column;
+    border-radius:22px;
+  }
+
+  .featured-review-project > .browser .preview{
+    flex:1;
+    width:100%;
+    height:100%;
+    min-height:540px;
+    aspect-ratio:auto;
+  }
+
+  .featured-review-project > .browser .preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+  }
+
+  .featured-review-project .project-info{
+    height:100%;
+    padding:7px 7px 7px 0;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+
+  .featured-review-project .project-country{
+    margin:0 0 4px;
+    font-size:.67rem;
+    letter-spacing:.14em;
+  }
+
+  .featured-review-project .project-info h3{
+    margin:0 0 12px;
+    font-size:1.86rem;
+    line-height:1;
+    white-space:normal;
+  }
+
+  .featured-review-project .static-review{
+    flex:1;
+    width:100%;
+    margin:0;
+    padding:19px 20px 17px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    overflow:hidden;
+    border-radius:18px;
+    border:1px solid #ded6ca;
+    background:linear-gradient(145deg,#fbf8f2 0%,#f4eee4 100%);
+    box-shadow:0 10px 28px rgba(62,49,34,.055);
+  }
+
+  .featured-review-project .client-review:before{
+    display:block;
+    right:17px;
+    top:7px;
+    font-size:3.05rem;
+    color:rgba(168,120,73,.16);
+  }
+
+  .featured-review-project .client-review-kicker{
+    margin:0 0 8px;
+    color:#a66f3c;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:.65rem;
+    font-weight:850;
+  }
+
+  .featured-review-project .client-review-kicker:before{
+    display:none;
+  }
+
+  .featured-review-project .static-review h4{
+    max-width:88%;
+    margin:0 0 12px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:1.02rem;
+    line-height:1.28;
+    font-weight:500;
+    color:#1f1d1a;
+  }
+
+  .featured-review-project .client-review-body{
+    flex:0 1 auto;
+    max-height:none;
+    overflow:visible;
+    padding-right:0;
+  }
+
+  .featured-review-project .client-review-text{
+    margin:0 0 10px;
+    font-family:Inter,Arial,sans-serif;
+    font-size:.84rem;
+    line-height:1.55;
+    color:#403b35;
+  }
+
+  .featured-review-project .client-review-author{
+    margin-top:auto;
+    padding-top:12px;
+    border-top:1px solid #ddd3c6;
+    color:#786e63;
+    font-size:.73rem;
+    line-height:1.4;
+  }
+
+  .featured-review-project .client-review-author strong{
+    display:block;
+    margin-bottom:2px;
+    color:#1f1d1a;
+    font-size:.84rem;
+    font-weight:800;
+  }
+}
+
+@media (max-width:1000px){
+  .featured-review-project{
+    width:100%;
+    margin-left:0;
+    transform:none;
+    grid-template-columns:1fr;
+    gap:14px;
+    align-items:stretch;
+  }
+
+  .featured-review-project:hover{
+    transform:translateY(-3px);
+  }
+
+  .featured-review-project > .browser{
+    height:auto;
+    min-height:0;
+  }
+
+  .featured-review-project > .browser .preview{
+    height:auto;
+    min-height:0;
+    aspect-ratio:16 / 9;
+  }
+
+  .featured-review-project > .browser .preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+  }
+
+  .featured-review-project .project-info{
+    height:auto;
+    padding:5px 3px 2px;
+  }
+
+  .featured-review-project .project-info h3{
+    margin:3px 0 10px;
+    font-size:1.7rem;
+  }
+
+  .featured-review-project .static-review{
+    width:100%;
+    margin:0;
+    padding:17px 17px 15px;
+  }
+
+  .featured-review-project .client-review-body{
+    max-height:none;
+    overflow:visible;
+    padding-right:0;
+  }
+
+  .featured-review-project .client-review-text{
+    font-size:.84rem;
+    line-height:1.52;
+  }
+}
+
+
+.featured-review-project .static-review:not(:has(h4)) .client-review-body{
+  margin-top:4px;
+}
+
 </style>
 </head>
 
@@ -1441,7 +1649,7 @@ footer{
     <div class="country-group active" id="greece">
 
       <!-- THEASIS -->
-      <article class="project">
+      <article class="project featured-review-project">
         <a class="browser" href="https://www.theasisluxuryapartments.com" target="_blank" rel="noopener">
           <div class="browser-top">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1458,11 +1666,21 @@ footer{
         <div class="project-info">
           <div class="project-country">Halkidiki · Greece</div>
           <h3>Theasis</h3>
+
+          <article class="client-review static-review">
+            <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
+            <div class="client-review-body">
+              <p class="client-review-text">Gabriel did an excellent job creating the website for Theasis Luxury Apartments. He was extremely polite, professional, and knowledgeable, and always willing to help. He clearly knew what he was doing, and the communication was excellent throughout. The website looks elegant and modern, and the price was very reasonable. Highly recommended!</p>
+            </div>
+            <div class="client-review-author">
+              <strong>Theasis Luxury Apartments</strong>
+            </div>
+          </article>
         </div>
       </article>
 
       <!-- KLEO HOUSE -->
-      <article class="project">
+      <article class="project featured-review-project">
         <a class="browser" href="https://www.CleoHouse.homes" target="_blank" rel="noopener">
           <div class="browser-top">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1479,11 +1697,21 @@ footer{
         <div class="project-info">
           <div class="project-country">Halkidiki · Greece</div>
           <h3>Kleo House</h3>
+
+          <article class="client-review static-review">
+            <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
+            <div class="client-review-body">
+              <p class="client-review-text">Gabriel created our website for Kleo House and we are very happy with the result. He was professional, easy to communicate with, and always helpful. The website looks modern and elegant, and the whole process was smooth from start to finish. We would definitely recommend him.</p>
+            </div>
+            <div class="client-review-author">
+              <strong>Kleo House</strong>
+            </div>
+          </article>
         </div>
       </article>
 
       <!-- SEASHORE RESIDENCE -->
-      <article class="project seashore-card">
+      <article class="project seashore-card seashore-review-project featured-review-project">
         <a class="browser" href="https://www.SeaShoreResidence.com" target="_blank" rel="noopener">
           <div class="browser-top">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1517,7 +1745,7 @@ footer{
       </article>
 
       <!-- ALMIRA BLUE -->
-      <article class="project">
+      <article class="project featured-review-project">
         <a class="browser" href="https://AlmiraBlue.gr" target="_blank" rel="noopener">
           <div class="browser-top">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1534,6 +1762,16 @@ footer{
         <div class="project-info">
           <div class="project-country">Halkidiki · Greece</div>
           <h3>Almira Blue</h3>
+
+          <article class="client-review static-review">
+            <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
+            <div class="client-review-body">
+              <p class="client-review-text">Gabriel created the website for Almira Blue and we are really happy with the result. From the beginning, he was very friendly, patient, and easy to communicate with. He understood what we wanted and helped us with many details along the way. The website looks beautiful, modern, and represents our place very well. Everything was done professionally and at a very fair price. We would happily recommend him to anyone looking for a good website.</p>
+            </div>
+            <div class="client-review-author">
+              <strong>Almira Blue</strong>
+            </div>
+          </article>
         </div>
       </article>
 
