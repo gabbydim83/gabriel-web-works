@@ -1670,7 +1670,7 @@ footer{
           <article class="client-review static-review">
             <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
             <div class="client-review-body">
-              <p class="client-review-text">Gabriel did an excellent job creating the website for Theasis Luxury Apartments. He was extremely polite, professional, and knowledgeable, and always willing to help. He clearly knew what he was doing, and the communication was excellent throughout. The website looks elegant and modern, and the price was very reasonable. Highly recommended!</p>
+              <p class="client-review-text" data-review-i18n="theasisReview">Gabriel did an excellent job creating the website for Theasis Luxury Apartments. He was extremely polite, professional, and knowledgeable, and always willing to help. He clearly knew what he was doing, and the communication was excellent throughout. The website looks elegant and modern, and the price was very reasonable. Highly recommended!</p>
             </div>
             <div class="client-review-author">
               <strong>Theasis Luxury Apartments</strong>
@@ -1701,7 +1701,7 @@ footer{
           <article class="client-review static-review">
             <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
             <div class="client-review-body">
-              <p class="client-review-text">Gabriel created our website for Kleo House and we are very happy with the result. He was professional, easy to communicate with, and always helpful. The website looks modern and elegant, and the whole process was smooth from start to finish. We would definitely recommend him.</p>
+              <p class="client-review-text" data-review-i18n="kleoReview">Gabriel created our website for Kleo House and we are very happy with the result. He was professional, easy to communicate with, and always helpful. The website looks modern and elegant, and the whole process was smooth from start to finish. We would definitely recommend him.</p>
             </div>
             <div class="client-review-author">
               <strong>Kleo House</strong>
@@ -1731,10 +1731,10 @@ footer{
 
           <article class="client-review static-review">
             <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
-            <h4>Outstanding Service and Outstanding Results!</h4>
+            <h4 data-review-i18n="seashoreTitle">Outstanding Service and Outstanding Results!</h4>
             <div class="client-review-body">
-              <p class="client-review-text">Working with Gabriel on the website for my short-term rentals was an exceptional experience from start to finish. He demonstrated high professionalism, speed, and great attention to detail throughout the entire setup.</p>
-              <p class="client-review-text">The final result is modern, clean, fully functional, and perfectly tailored to our direct booking and legal requirements in Greece. Communication was seamless, clear, and efficient at every step. I highly recommend his services to anyone looking for a reliable, top-tier web developer!</p>
+              <p class="client-review-text" data-review-i18n="seashoreReview1">Working with Gabriel on the website for my short-term rentals was an exceptional experience from start to finish. He demonstrated high professionalism, speed, and great attention to detail throughout the entire setup.</p>
+              <p class="client-review-text" data-review-i18n="seashoreReview2">The final result is modern, clean, fully functional, and perfectly tailored to our direct booking and legal requirements in Greece. Communication was seamless, clear, and efficient at every step. I highly recommend his services to anyone looking for a reliable, top-tier web developer!</p>
             </div>
             <div class="client-review-author">
               <strong>Evanghelos</strong>
@@ -1766,7 +1766,7 @@ footer{
           <article class="client-review static-review">
             <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
             <div class="client-review-body">
-              <p class="client-review-text">Gabriel created the website for Almira Blue and we are really happy with the result. From the beginning, he was very friendly, patient, and easy to communicate with. He understood what we wanted and helped us with many details along the way. The website looks beautiful, modern, and represents our place very well. Everything was done professionally and at a very fair price. We would happily recommend him to anyone looking for a good website.</p>
+              <p class="client-review-text" data-review-i18n="almiraReview">Gabriel created the website for Almira Blue and we are really happy with the result. From the beginning, he was very friendly, patient, and easy to communicate with. He understood what we wanted and helped us with many details along the way. The website looks beautiful, modern, and represents our place very well. Everything was done professionally and at a very fair price. We would happily recommend him to anyone looking for a good website.</p>
             </div>
             <div class="client-review-author">
               <strong>Almira Blue</strong>
@@ -1793,6 +1793,34 @@ footer{
         <div class="project-info">
           <div class="project-country">Agios Nikolaos · Halkidiki · Greece</div>
           <h3>Nefeli Villa</h3>
+        </div>
+      </article>
+
+      <!-- M&M VILLAS VOURVOUROU -->
+      <article class="project featured-review-project">
+        <a class="browser" href="https://www.mmvillasvourvourou.com/" target="_blank" rel="noopener">
+          <div class="browser-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="url">mmvillasvourvourou.com</div>
+          </div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>M&amp;M Villas Vourvourou</strong></div>
+            <img src="assets/Images/mmvillas.webp" alt="M&amp;M Villas Vourvourou website preview"
+                 onload="this.previousElementSibling.style.display='none'"
+                 onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Vourvourou · Halkidiki · Greece</div>
+          <h3>M&amp;M Villas Vourvourou</h3>
+          <article class="client-review static-review">
+            <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
+            <div class="client-review-body">
+              <p class="client-review-text" data-review-i18n="mmReview">The result was outstanding, the turnaround time was very short, the collaboration was smooth and easy, and I am very satisfied with the outcome. Five stars — highly recommended!</p>
+            </div>
+            <div class="client-review-author"><strong>M&amp;M Villas Vourvourou</strong></div>
+          </article>
         </div>
       </article>
 
@@ -1835,46 +1863,88 @@ footer{
     <div class="country-group" id="romania">
 
       <!-- CUCU RESIDENCE -->
-      <article class="project">
+      <article class="project featured-review-project">
         <a class="browser" href="https://www.cucuresidence.com/" target="_blank" rel="noopener">
-          <div class="browser-top">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <div class="url">cucuresidence.com</div>
-          </div>
+          <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">cucuresidence.com</div></div>
           <div class="preview">
             <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
             <div class="preview-placeholder"><strong>Cucu Residence</strong></div>
-            <img src="assets/Images/cucu.webp" alt="Cucu Residence website preview"
-                 onload="this.previousElementSibling.style.display='none'"
-                 onerror="this.style.display='none'">
+            <img src="assets/Images/cucu.webp" alt="Cucu Residence website preview" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
           </div>
         </a>
         <div class="project-info">
           <div class="project-country">Brașov · Romania</div>
           <h3>Cucu Residence</h3>
+          <article class="client-review static-review">
+            <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
+            <div class="client-review-body"><p class="client-review-text" data-review-i18n="cucuReview">The website was created professionally and very quickly. Communication was excellent throughout, and I am extremely satisfied with the result. Highly recommended!</p></div>
+            <div class="client-review-author"><strong>Cucu Residence</strong></div>
+          </article>
         </div>
       </article>
 
-      <!-- CENTRAL PREMIUM -->
-      <article class="project">
-        <a class="browser" href="https://centralpremium.accomodation.buzz/" target="_blank" rel="noopener">
-          <div class="browser-top">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <div class="url">centralpremium.accomodation.buzz</div>
-          </div>
+      <!-- CENTRAL PREMIUM APARTMENT -->
+      <article class="project featured-review-project">
+        <a class="browser" href="https://central-premium-apartment.com/" target="_blank" rel="noopener">
+          <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">central-premium-apartment.com</div></div>
           <div class="preview">
             <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
             <div class="preview-placeholder"><strong>Central Premium Apartment</strong></div>
-            <img src="assets/Images/central.webp" alt="Central Premium Apartment website preview"
-                 onload="this.previousElementSibling.style.display='none'"
-                 onerror="this.style.display='none'">
+            <img src="assets/Images/cpa.webp" alt="Central Premium Apartment website preview" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
           </div>
         </a>
         <div class="project-info">
           <div class="project-country">Brașov · Romania</div>
           <h3>Central Premium Apartment</h3>
+          <article class="client-review static-review">
+            <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
+            <div class="client-review-body">
+              <p class="client-review-text" data-review-i18n="centralReview1">I consider myself a demanding client when it comes to purchasing a product or service. In my collaboration with Mr. Gabriel Borulea, I can honestly say that I never felt like I was, in one way or another, “the difficult client” — even if perhaps I was.</p>
+              <p class="client-review-text" data-review-i18n="centralReview2">I turned to Mr. Gabriel to create two websites, and it was an exceptional experience. He anticipates what the client wants — his experience really shows. He is extremely dedicated and present throughout the process, with an impressive speed of execution. I highly recommend him to anyone looking for high-quality services and the experience of working with a true professional!</p>
+            </div>
+            <div class="client-review-author"><strong>Central Premium Apartment</strong></div>
+          </article>
         </div>
+      </article>
 
+      <!-- CENTRAL BRASOV APARTMENT -->
+      <article class="project featured-review-project">
+        <a class="browser" href="https://central-brasov-apartment.com/" target="_blank" rel="noopener">
+          <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">central-brasov-apartment.com</div></div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>Central Brașov Apartment</strong></div>
+            <img src="assets/Images/cba.webp" alt="Central Brașov Apartment website preview" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Brașov · Romania</div>
+          <h3>Central Brașov Apartment</h3>
+          <article class="client-review static-review">
+            <div class="client-review-kicker" data-i18n="clientRecommendation">Client recommendation</div>
+            <div class="client-review-body">
+              <p class="client-review-text" data-review-i18n="centralReview1">I consider myself a demanding client when it comes to purchasing a product or service. In my collaboration with Mr. Gabriel Borulea, I can honestly say that I never felt like I was, in one way or another, “the difficult client” — even if perhaps I was.</p>
+              <p class="client-review-text" data-review-i18n="centralReview2">I turned to Mr. Gabriel to create two websites, and it was an exceptional experience. He anticipates what the client wants — his experience really shows. He is extremely dedicated and present throughout the process, with an impressive speed of execution. I highly recommend him to anyone looking for high-quality services and the experience of working with a true professional!</p>
+            </div>
+            <div class="client-review-author"><strong>Central Brașov Apartment</strong></div>
+          </article>
+        </div>
+      </article>
+
+      <!-- CASA FELICE -->
+      <article class="project">
+        <a class="browser" href="https://www.casafelice.online/" target="_blank" rel="noopener">
+          <div class="browser-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">casafelice.online</div></div>
+          <div class="preview">
+            <span class="live-badge" data-i18n="visitSiteBadge">Visit website ↗</span>
+            <div class="preview-placeholder"><strong>Casa Felice</strong></div>
+            <img src="assets/Images/casafelice.webp" alt="Casa Felice website preview" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+          </div>
+        </a>
+        <div class="project-info">
+          <div class="project-country">Brașov · Romania</div>
+          <h3>Casa Felice</h3>
+        </div>
       </article>
 
       <div class="more-projects">
@@ -1882,11 +1952,7 @@ footer{
           <span data-i18n="moreProjects">More projects are being added</span>
           <span class="loading-dots"><i></i><i></i><i></i></span>
         </div>
-        <div class="skeleton-row">
-          <div class="skeleton"></div>
-          <div class="skeleton"></div>
-          <div class="skeleton"></div>
-        </div>
+        <div class="skeleton-row"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
       </div>
 
     </div>
@@ -2535,6 +2601,82 @@ const translations = {
 };
 
 
+
+const reviewTranslations = {
+  en:{
+    theasisReview:"Gabriel did an excellent job creating the website for Theasis Luxury Apartments. He was extremely polite, professional, and knowledgeable, and always willing to help. He clearly knew what he was doing, and the communication was excellent throughout. The website looks elegant and modern, and the price was very reasonable. Highly recommended!",
+    kleoReview:"Gabriel created our website for Kleo House and we are very happy with the result. He was professional, easy to communicate with, and always helpful. The website looks modern and elegant, and the whole process was smooth from start to finish. We would definitely recommend him.",
+    seashoreTitle:"Outstanding Service and Outstanding Results!",
+    seashoreReview1:"Working with Gabriel on the website for my short-term rentals was an exceptional experience from start to finish. He demonstrated high professionalism, speed, and great attention to detail throughout the entire setup.",
+    seashoreReview2:"The final result is modern, clean, fully functional, and perfectly tailored to our direct booking and legal requirements in Greece. Communication was seamless, clear, and efficient at every step. I highly recommend his services to anyone looking for a reliable, top-tier web developer!",
+    almiraReview:"Gabriel created the website for Almira Blue and we are really happy with the result. From the beginning, he was very friendly, patient, and easy to communicate with. He understood what we wanted and helped us with many details along the way. The website looks beautiful, modern, and represents our place very well. Everything was done professionally and at a very fair price. We would happily recommend him to anyone looking for a good website.",
+    mmReview:"The result was outstanding, the turnaround time was very short, the collaboration was smooth and easy, and I am very satisfied with the outcome. Five stars — highly recommended!",
+    cucuReview:"The website was created professionally and very quickly. Communication was excellent throughout, and I am extremely satisfied with the result. Highly recommended!",
+    centralReview1:"I consider myself a demanding client when it comes to purchasing a product or service. In my collaboration with Mr. Gabriel Borulea, I can honestly say that I never felt like I was, in one way or another, “the difficult client” — even if perhaps I was.",
+    centralReview2:"I turned to Mr. Gabriel to create two websites, and it was an exceptional experience. He anticipates what the client wants — his experience really shows. He is extremely dedicated and present throughout the process, with an impressive speed of execution. I highly recommend him to anyone looking for high-quality services and the experience of working with a true professional!"
+  },
+  ro:{
+    theasisReview:"Gabriel a făcut o treabă excelentă realizând website-ul pentru Theasis Luxury Apartments. A fost extrem de politicos, profesionist și bine pregătit și a fost mereu dispus să ajute. Se vedea clar că știe foarte bine ce face, iar comunicarea a fost excelentă pe tot parcursul colaborării. Website-ul arată elegant și modern, iar prețul a fost foarte rezonabil. Îl recomand cu încredere!",
+    kleoReview:"Gabriel a creat website-ul nostru pentru Kleo House și suntem foarte mulțumiți de rezultat. A fost profesionist, ușor de abordat și mereu dispus să ajute. Website-ul arată modern și elegant, iar întregul proces a decurs foarte bine de la început până la final. Cu siguranță îl recomandăm.",
+    seashoreTitle:"Servicii excelente și rezultate excelente!",
+    seashoreReview1:"Colaborarea cu Gabriel pentru website-ul proprietăților mele de închiriere pe termen scurt a fost o experiență excepțională de la început până la final. A demonstrat un nivel ridicat de profesionalism, rapiditate și foarte multă atenție la detalii pe parcursul întregii implementări.",
+    seashoreReview2:"Rezultatul final este modern, curat, complet funcțional și perfect adaptat cerințelor noastre de rezervare directă și celor legale din Grecia. Comunicarea a fost simplă, clară și eficientă la fiecare pas. Îi recomand cu încredere serviciile oricui caută un web developer serios și de nivel foarte bun!",
+    almiraReview:"Gabriel a creat website-ul pentru Almira Blue și suntem foarte mulțumiți de rezultat. Încă de la început a fost foarte prietenos, răbdător și ușor de abordat. A înțeles ce ne doream și ne-a ajutat cu multe detalii pe parcurs. Website-ul arată foarte frumos, modern și reprezintă foarte bine locația noastră. Totul a fost realizat profesionist și la un preț foarte corect. L-am recomanda cu plăcere oricui își dorește un website bun.",
+    mmReview:"Rezultatul este extraordinar, timpul de execuție a fost foarte scurt, am colaborat foarte ușor și sunt foarte mulțumit de rezultat. Recomand 5★!",
+    cucuReview:"Website-ul a fost realizat profesionist și foarte repede, am avut o comunicare foarte bună și sunt extrem de mulțumit de rezultat. Recomand!",
+    centralReview1:"Mă consider un client dificil atunci când vine vorba să achiziționez un produs sau serviciu. În cazul colaborării cu domnul Gabriel Borulea, cu sinceritate vă spun, n-am simțit că am fost într-un fel sau altul „clientul dificil”, deși poate am fost, dar nu am simțit.",
+    centralReview2:"Am apelat la domnul Gabriel pentru elaborarea a două site-uri și a fost o experiență excepțională. Anticipează ceea ce își dorește clientul, se simte experiența. Foarte dedicat și prezent procesului, plus o viteză foarte mare de operare. Recomand cu mare încredere celor care vor servicii de înaltă calitate și o experiență de colaborare cu un super profesionist!"
+  },
+  el:{
+    theasisReview:"Ο Gabriel έκανε εξαιρετική δουλειά δημιουργώντας την ιστοσελίδα για το Theasis Luxury Apartments. Ήταν εξαιρετικά ευγενικός, επαγγελματίας και καταρτισμένος και πάντα πρόθυμος να βοηθήσει. Ήταν ξεκάθαρο ότι γνώριζε πολύ καλά τι έκανε και η επικοινωνία ήταν άριστη σε όλη τη διάρκεια της συνεργασίας. Η ιστοσελίδα είναι κομψή και σύγχρονη και η τιμή ήταν πολύ λογική. Τον προτείνουμε ανεπιφύλακτα!",
+    kleoReview:"Ο Gabriel δημιούργησε την ιστοσελίδα μας για το Kleo House και είμαστε πολύ ευχαριστημένοι με το αποτέλεσμα. Ήταν επαγγελματίας, εύκολος στην επικοινωνία και πάντα πρόθυμος να βοηθήσει. Η ιστοσελίδα είναι σύγχρονη και κομψή και όλη η διαδικασία κύλησε ομαλά από την αρχή μέχρι το τέλος. Σίγουρα τον προτείνουμε.",
+    seashoreTitle:"Εξαιρετική εξυπηρέτηση και εξαιρετικά αποτελέσματα!",
+    seashoreReview1:"Η συνεργασία με τον Gabriel για την ιστοσελίδα των βραχυχρόνιων μισθώσεών μου ήταν εξαιρετική εμπειρία από την αρχή μέχρι το τέλος. Έδειξε υψηλό επαγγελματισμό, ταχύτητα και μεγάλη προσοχή στη λεπτομέρεια σε όλη τη διαδικασία.",
+    seashoreReview2:"Το τελικό αποτέλεσμα είναι σύγχρονο, καθαρό, πλήρως λειτουργικό και απόλυτα προσαρμοσμένο στις ανάγκες μας για απευθείας κρατήσεις και στις νομικές απαιτήσεις στην Ελλάδα. Η επικοινωνία ήταν άψογη, σαφής και αποτελεσματική σε κάθε βήμα. Τον προτείνω ανεπιφύλακτα σε όποιον αναζητά έναν αξιόπιστο web developer υψηλού επιπέδου!",
+    almiraReview:"Ο Gabriel δημιούργησε την ιστοσελίδα για το Almira Blue και είμαστε πραγματικά πολύ ευχαριστημένοι με το αποτέλεσμα. Από την αρχή ήταν πολύ φιλικός, υπομονετικός και εύκολος στην επικοινωνία. Κατάλαβε τι θέλαμε και μας βοήθησε με πολλές λεπτομέρειες στην πορεία. Η ιστοσελίδα είναι όμορφη, σύγχρονη και αντιπροσωπεύει πολύ καλά τον χώρο μας. Όλα έγιναν επαγγελματικά και σε πολύ δίκαιη τιμή. Θα τον προτείναμε με χαρά σε όποιον αναζητά μια καλή ιστοσελίδα.",
+    mmReview:"Το αποτέλεσμα ήταν εξαιρετικό, ο χρόνος υλοποίησης πολύ σύντομος, η συνεργασία ήταν πολύ εύκολη και είμαι απόλυτα ικανοποιημένος με το αποτέλεσμα. Τον προτείνω ανεπιφύλακτα — 5 αστέρια!",
+    cucuReview:"Η ιστοσελίδα δημιουργήθηκε επαγγελματικά και πολύ γρήγορα. Είχαμε εξαιρετική επικοινωνία και είμαι απόλυτα ικανοποιημένος με το αποτέλεσμα. Τον προτείνω ανεπιφύλακτα!",
+    centralReview1:"Θεωρώ τον εαυτό μου απαιτητικό πελάτη όταν πρόκειται να αγοράσω ένα προϊόν ή μια υπηρεσία. Στη συνεργασία μου με τον κ. Gabriel Borulea, μπορώ ειλικρινά να πω ότι δεν ένιωσα ποτέ πως ήμουν με οποιονδήποτε τρόπο «ο δύσκολος πελάτης», ακόμη κι αν ίσως ήμουν.",
+    centralReview2:"Απευθύνθηκα στον κ. Gabriel για τη δημιουργία δύο ιστοσελίδων και η εμπειρία ήταν εξαιρετική. Προβλέπει τι θέλει ο πελάτης — η εμπειρία του φαίνεται ξεκάθαρα. Είναι ιδιαίτερα αφοσιωμένος και παρών σε όλη τη διαδικασία, με εντυπωσιακή ταχύτητα υλοποίησης. Τον προτείνω με μεγάλη εμπιστοσύνη σε όσους αναζητούν υπηρεσίες υψηλής ποιότητας και συνεργασία με έναν πραγματικό επαγγελματία!"
+  },
+  de:{
+    theasisReview:"Gabriel hat bei der Erstellung der Website für Theasis Luxury Apartments hervorragende Arbeit geleistet. Er war äußerst höflich, professionell und kompetent und jederzeit hilfsbereit. Man merkte deutlich, dass er genau wusste, was er tat, und die Kommunikation war während der gesamten Zusammenarbeit ausgezeichnet. Die Website wirkt elegant und modern und der Preis war sehr fair. Absolut empfehlenswert!",
+    kleoReview:"Gabriel hat unsere Website für Kleo House erstellt und wir sind mit dem Ergebnis sehr zufrieden. Er war professionell, unkompliziert in der Kommunikation und jederzeit hilfsbereit. Die Website wirkt modern und elegant und der gesamte Prozess verlief von Anfang bis Ende reibungslos. Wir würden ihn auf jeden Fall weiterempfehlen.",
+    seashoreTitle:"Hervorragender Service und hervorragende Ergebnisse!",
+    seashoreReview1:"Die Zusammenarbeit mit Gabriel an der Website für meine Kurzzeitvermietungen war von Anfang bis Ende eine außergewöhnlich gute Erfahrung. Während der gesamten Umsetzung zeigte er hohe Professionalität, Schnelligkeit und große Liebe zum Detail.",
+    seashoreReview2:"Das Endergebnis ist modern, klar, vollständig funktionsfähig und perfekt auf unsere Anforderungen an Direktbuchungen sowie die rechtlichen Vorgaben in Griechenland abgestimmt. Die Kommunikation war bei jedem Schritt reibungslos, klar und effizient. Ich empfehle seine Leistungen jedem, der einen zuverlässigen Webentwickler auf höchstem Niveau sucht!",
+    almiraReview:"Gabriel hat die Website für Almira Blue erstellt und wir sind mit dem Ergebnis wirklich sehr zufrieden. Von Anfang an war er sehr freundlich, geduldig und angenehm in der Kommunikation. Er verstand, was wir wollten, und half uns unterwegs bei vielen Details. Die Website ist schön, modern und repräsentiert unseren Ort sehr gut. Alles wurde professionell und zu einem sehr fairen Preis umgesetzt. Wir würden ihn jedem empfehlen, der eine gute Website sucht.",
+    mmReview:"Das Ergebnis ist hervorragend, die Umsetzung ging sehr schnell, die Zusammenarbeit war unkompliziert und ich bin mit dem Ergebnis sehr zufrieden. Klare 5 Sterne – absolut empfehlenswert!",
+    cucuReview:"Die Website wurde professionell und sehr schnell umgesetzt. Die Kommunikation war ausgezeichnet und ich bin mit dem Ergebnis äußerst zufrieden. Absolut empfehlenswert!",
+    centralReview1:"Ich halte mich für einen anspruchsvollen Kunden, wenn es darum geht, ein Produkt oder eine Dienstleistung zu kaufen. Bei der Zusammenarbeit mit Herrn Gabriel Borulea kann ich ehrlich sagen, dass ich nie das Gefühl hatte, in irgendeiner Weise „der schwierige Kunde“ zu sein – auch wenn ich es vielleicht war.",
+    centralReview2:"Ich habe Herrn Gabriel mit der Erstellung von zwei Websites beauftragt und es war eine außergewöhnliche Erfahrung. Er versteht im Voraus, was sich der Kunde wünscht – seine Erfahrung ist deutlich spürbar. Er ist äußerst engagiert und während des gesamten Prozesses präsent, dazu kommt eine beeindruckende Umsetzungsgeschwindigkeit. Ich empfehle ihn mit voller Überzeugung allen, die hochwertige Leistungen und die Zusammenarbeit mit einem echten Profi suchen!"
+  },
+  bg:{
+    theasisReview:"Gabriel свърши отлична работа по създаването на уебсайта за Theasis Luxury Apartments. Беше изключително учтив, професионален и компетентен и винаги готов да помогне. Ясно личеше, че знае точно какво прави, а комуникацията беше отлична през цялото време. Уебсайтът изглежда елегантно и модерно, а цената беше много разумна. Горещо го препоръчваме!",
+    kleoReview:"Gabriel създаде нашия уебсайт за Kleo House и сме много доволни от резултата. Беше професионален, комуникацията с него беше лесна и винаги беше готов да помогне. Уебсайтът изглежда модерно и елегантно, а целият процес премина гладко от началото до края. Определено бихме го препоръчали.",
+    seashoreTitle:"Отлично обслужване и отлични резултати!",
+    seashoreReview1:"Работата с Gabriel по уебсайта за моите краткосрочни наеми беше изключително преживяване от началото до края. Той показа висок професионализъм, бързина и голямо внимание към детайлите през целия процес.",
+    seashoreReview2:"Крайният резултат е модерен, изчистен, напълно функционален и идеално съобразен с нашите изисквания за директни резервации и законовите изисквания в Гърция. Комуникацията беше безпроблемна, ясна и ефективна на всяка стъпка. Силно препоръчвам услугите му на всеки, който търси надежден уеб разработчик от високо ниво!",
+    almiraReview:"Gabriel създаде уебсайта за Almira Blue и сме наистина много доволни от резултата. От самото начало беше много приятелски настроен, търпелив и лесен за комуникация. Разбра какво искаме и ни помогна с много детайли по пътя. Уебсайтът изглежда красив и модерен и представя мястото ни много добре. Всичко беше направено професионално и на много справедлива цена. С удоволствие бихме го препоръчали на всеки, който търси добър уебсайт.",
+    mmReview:"Резултатът е отличен, срокът за изпълнение беше много кратък, работихме много лесно заедно и съм изключително доволен от резултата. Препоръчвам с 5 звезди!",
+    cucuReview:"Уебсайтът беше изработен професионално и много бързо. Комуникацията беше отлична и съм изключително доволен от резултата. Препоръчвам!",
+    centralReview1:"Смятам себе си за взискателен клиент, когато става дума за покупка на продукт или услуга. В сътрудничеството ми с г-н Gabriel Borulea мога искрено да кажа, че никога не почувствах, че по някакъв начин съм „трудният клиент“, дори и може би да съм бил.",
+    centralReview2:"Обърнах се към г-н Gabriel за изработването на два уебсайта и преживяването беше изключително. Той предвижда какво иска клиентът — опитът му ясно се усеща. Изключително отдаден е и присъства активно през целия процес, а скоростта му на работа е впечатляваща. Препоръчвам го с голямо доверие на всеки, който търси услуги с високо качество и работа с истински професионалист!"
+  },
+  sr:{
+    theasisReview:"Gabriel je uradio odličan posao na izradi sajta za Theasis Luxury Apartments. Bio je izuzetno ljubazan, profesionalan i stručan i uvek spreman da pomogne. Jasno se videlo da tačno zna šta radi, a komunikacija je bila odlična tokom cele saradnje. Sajt izgleda elegantno i moderno, a cena je bila veoma korektna. Topla preporuka!",
+    kleoReview:"Gabriel je napravio naš sajt za Kleo House i veoma smo zadovoljni rezultatom. Bio je profesionalan, komunikacija je bila laka i uvek je bio spreman da pomogne. Sajt izgleda moderno i elegantno, a ceo proces je protekao glatko od početka do kraja. Svakako bismo ga preporučili.",
+    seashoreTitle:"Izuzetna usluga i izuzetni rezultati!",
+    seashoreReview1:"Saradnja sa Gabrielom na sajtu za moje objekte za kratkoročni najam bila je izuzetno iskustvo od početka do kraja. Pokazao je visok nivo profesionalizma, brzinu i veliku pažnju prema detaljima tokom celog procesa.",
+    seashoreReview2:"Krajnji rezultat je moderan, čist, potpuno funkcionalan i savršeno prilagođen našim zahtevima za direktne rezervacije i pravnim zahtevima u Grčkoj. Komunikacija je bila besprekorna, jasna i efikasna na svakom koraku. Njegove usluge toplo preporučujem svakome ko traži pouzdanog web developera vrhunskog nivoa!",
+    almiraReview:"Gabriel je napravio sajt za Almira Blue i zaista smo veoma zadovoljni rezultatom. Od samog početka bio je veoma ljubazan, strpljiv i lak za komunikaciju. Razumeo je šta želimo i pomogao nam oko mnogih detalja tokom procesa. Sajt izgleda lepo i moderno i veoma dobro predstavlja naše mesto. Sve je urađeno profesionalno i po veoma korektnoj ceni. Rado bismo ga preporučili svakome ko traži dobar sajt.",
+    mmReview:"Rezultat je odličan, vreme izrade bilo je veoma kratko, saradnja je bila vrlo laka i veoma sam zadovoljan rezultatom. Preporuka 5 zvezdica!",
+    cucuReview:"Sajt je urađen profesionalno i veoma brzo. Komunikacija je bila odlična i izuzetno sam zadovoljan rezultatom. Preporučujem!",
+    centralReview1:"Smatram sebe zahtevnim klijentom kada kupujem proizvod ili uslugu. U saradnji sa gospodinom Gabrielom Boruleom mogu iskreno da kažem da nijednog trenutka nisam imao osećaj da sam na bilo koji način „težak klijent“, iako možda jesam bio.",
+    centralReview2:"Obratio sam se gospodinu Gabrielu za izradu dva sajta i iskustvo je bilo izuzetno. Predviđa šta klijent želi — njegovo iskustvo se zaista oseća. Veoma je posvećen i prisutan tokom celog procesa, uz izuzetno veliku brzinu realizacije. Sa velikim poverenjem ga preporučujem svima koji žele uslugu visokog kvaliteta i saradnju sa pravim profesionalcem!"
+  }
+};
+
 const whatsappNumber = "407555687226";
 
 const whatsappMessages = {
@@ -2593,6 +2735,13 @@ function updateLanguage(lang){
     const key=el.dataset.i18n;
     if(translations[lang][key] !== undefined){
       el.innerHTML=translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-review-i18n]").forEach(el=>{
+    const key=el.dataset.reviewI18n;
+    if(reviewTranslations[lang] && reviewTranslations[lang][key] !== undefined){
+      el.textContent=reviewTranslations[lang][key];
     }
   });
 
